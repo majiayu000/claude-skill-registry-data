@@ -1,0 +1,37 @@
+{
+  "name": "gas-clasp-ops",
+  "repo": "tarotene/dotfiles",
+  "path": "config/agents/skills/gas-clasp-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tarotene/dotfiles",
+  "dir_name": "gas-clasp-ops",
+  "downloaded_at": "2026-11-27T07:17:16.752410Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tarotene",
+  "source_url": "https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/gas-clasp-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/gas-clasp-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Google Apps Script (GAS) \u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u3092 clasp CLI \u3067\u64cd\u4f5c\u3059\u308b\u3068\u304d\u306e\u624b\u9806(\u521d\u56de\u30bb\u30c3\u30c8\u30a2\u30c3\u30d7\u30fb\u30ed\u30b0\u30a4\u30f3\u30fbpush\u30fbrun-function\u30fb\u30b9\u30af\u30ea\u30d7\u30c8\u5074\u306e\u898f\u7d04)\u3002GAS\u30fbGoogle Apps Script\u30fbclasp\u30fbclasp\u3067GAS\u3092\u64cd\u4f5c\u30fbGAS\u3092CLI\u304b\u3089\u53e9\u304f\u30fbFormApp\u30fbSpreadsheetApp\u30fbApps Script API\u30fb\u30b9\u30af\u30ea\u30d7\u30c8\u306eURL\u3092\u53d6\u5f97\u3001\u3068\u3044\u3063\u305f\u6587\u8108\u3067\u4f7f\u3046\u3002clasp login, clasp push, clasp run-function, Apps Script CLI, headless GAS execution\u3001\u3068\u3044\u3063\u305f\u82f1\u8a9e\u306e\u6587\u8108\u3067\u3082\u4f7f\u3046\u3002"
+}

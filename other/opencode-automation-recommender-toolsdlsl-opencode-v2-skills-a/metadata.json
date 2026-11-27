@@ -1,0 +1,38 @@
+{
+  "name": "opencode-automation-recommender",
+  "repo": "toolsdlsl/Opencode-V2-Skills-Agents",
+  "path": "skills/opencode-automation-recommender/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/toolsdlsl/Opencode-V2-Skills-Agents",
+  "dir_name": "opencode-automation-recommender-toolsdlsl-opencode-v2-skills-a",
+  "downloaded_at": "2026-11-27T07:30:52.813429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "toolsdlsl",
+  "source_url": "https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/opencode-automation-recommender/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/opencode-automation-recommender/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.",
+  "content_fingerprint": "9f367a3a3330231176ba7223a5b56c3a189eeea5d4e7eaccf1a409facc2896a3"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "patch-fanout",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/patch-fanout/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "patch-fanout",
+  "downloaded_at": "2026-11-27T07:34:23.479945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/patch-fanout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/patch-fanout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ports many independent patch units in parallel, one shark:code-writer for each unit, from an audit or a decision list. Use after shark:port-audit, or for a batch of small independent fixes."
+}

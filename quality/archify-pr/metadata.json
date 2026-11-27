@@ -1,0 +1,38 @@
+{
+  "name": "archify-pr",
+  "repo": "tt-a1i/archify",
+  "path": "archify-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/tt-a1i/archify",
+  "dir_name": "archify-pr",
+  "downloaded_at": "2026-11-27T07:33:05.606573Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tt-a1i",
+  "source_url": "https://github.com/tt-a1i/archify/blob/main/archify-pr/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tt-a1i/archify/blob/main/archify-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explain git branch changes, diffs, and GitHub pull requests or GitLab merge requests with visual architecture, workflow, sequence, ERD, or lifecycle walkthroughs. When a pull request carries material architectural, flow, schema, or async-state changes, lightly offer optional Archify PR diagrams and their review benefit without forcing them; build and attach Camo-safe dual-theme story or static diagrams when the user agrees or explicitly asks. Requires the companion archify core Skill."
+}

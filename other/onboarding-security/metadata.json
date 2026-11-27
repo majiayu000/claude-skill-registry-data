@@ -1,0 +1,37 @@
+{
+  "name": "onboarding-security",
+  "repo": "thrum-team/thrum-pro",
+  "path": "claude-plugin/skills/onboarding-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "onboarding-security",
+  "downloaded_at": "2026-11-27T07:25:31.538547Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/onboarding-security/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/onboarding-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a repository needs a written security model that tells Thrum's agents what to protect and what to ignore - first-time setup, a security scan that reports findings the owner already ruled out, or a role that designs a guard, cap or authorization without a stated boundary. Writes .thrum/policy/security-model.md and the role pointers. Recommended first step of project onboarding, and it runs on its own."
+}

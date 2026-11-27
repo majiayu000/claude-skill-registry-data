@@ -1,0 +1,38 @@
+{
+  "name": "model-pin-update",
+  "repo": "tarotene/dotfiles",
+  "path": "config/agents/skills/model-pin-update/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tarotene/dotfiles",
+  "dir_name": "model-pin-update",
+  "downloaded_at": "2026-11-27T07:17:17.943595Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tarotene",
+  "source_url": "https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/model-pin-update/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/model-pin-update/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u5916\u90e8 AI CLI\uff08GitHub Copilot CLI \u7b49\uff09\u306b\u56fa\u5b9a pin \u3057\u3066\u3042\u308b\u5177\u4f53\u30e2\u30c7\u30eb ID \u3092\u3001\u65b0\u30e2\u30c7\u30eb\u306e GA\u30fb\u65e7\u30e2\u30c7\u30eb\u306e\u5ec3\u6b62\u306b\u8ffd\u5f93\u3057\u3066\u66f4\u65b0\u3059\u308b\u624b\u9806\u3002\u30e2\u30c7\u30eb\u30a2\u30c3\u30d7\u30c7\u30fc\u30c8\u8ffd\u5f93\u30fb\u30e2\u30c7\u30eb pin \u66f4\u65b0\u30fbmodel bump\u30fbpin bump\u30fb\u65b0\u30e2\u30c7\u30eb\u5bfe\u5fdc\u30fbCopilot Review Hook \u3092\u30a2\u30c3\u30d7\u30c7\u30fc\u30c8\u3001\u3068\u3044\u3063\u305f\u4f9d\u983c\u3067\u4f7f\u3046\u3002Use when asked to bump/update a pinned model ID for an external AI CLI, follow up on a new model GA, or migrate off a deprecated model."
+}

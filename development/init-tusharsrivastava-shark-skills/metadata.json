@@ -1,0 +1,38 @@
+{
+  "name": "init",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/init/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "init-tusharsrivastava-shark-skills",
+  "downloaded_at": "2026-11-27T07:34:22.995747Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/init/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/init/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sets up a repository, or a multi-repo workspace, for shark one time. Adds the missing template sections to CLAUDE.md or AGENTS.md with values from the repository, the Working rules block, one session start rule, and the shark:asd-ste100 output style. Checks and sets up the tools behind the hooks, the guards and the debugger for the languages of the project (debug adapters, code-health analyzers, rules and baseline). In a folder that is not a repository, it can set up a workspace that manages several repositories (inside it or next to it), and asks for their paths or URLs. Keeps existing text. Use when the user says init, set up shark or check the shark tools, or after a kit update."
+}

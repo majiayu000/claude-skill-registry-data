@@ -1,0 +1,37 @@
+{
+  "name": "commit",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "commit-xiaolinbenben-food4agent",
+  "downloaded_at": "2026-11-27T08:00:09.438897Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/commit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/commit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Commit staged or unstaged changes with an AI-generated commit message that matches the repository's existing commit style. Use when the user asks to 'commit', 'commit changes', 'create a commit', 'save my work', or 'check in code'.",
+  "content_fingerprint": "c182ef0728ccb138540c8bd42866af12c3d3e70eb09d0e815f6e28e15bd53dd8"
+}

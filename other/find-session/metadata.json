@@ -1,0 +1,37 @@
+{
+  "name": "find-session",
+  "repo": "twidxuga/dotfiles",
+  "path": "claude/dot-claude/skills/find-session/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/twidxuga/dotfiles",
+  "dir_name": "find-session",
+  "downloaded_at": "2026-11-27T07:34:39.371214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "twidxuga",
+  "source_url": "https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/find-session/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/find-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to find, reopen or resume a past Claude Code session from a description (\"the session where I\u2026\", \"find the thread about\u2026\", \"/find-session \u2026\"). Finds it and, if exactly one matches, opens it in a new tmux window named after the session."
+}

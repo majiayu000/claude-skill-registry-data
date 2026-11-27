@@ -1,0 +1,36 @@
+{
+  "name": "my-cleanup",
+  "repo": "tarotene/dotfiles",
+  "path": "config/agents/skills/my-cleanup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tarotene/dotfiles",
+  "dir_name": "my-cleanup",
+  "downloaded_at": "2026-11-27T07:17:15.446130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tarotene",
+  "source_url": "https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/my-cleanup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/my-cleanup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u672c\u4eba\u304c\u7fd2\u6163\u3068\u3057\u3066\u624b\u3067\u6253\u3064\u300c\u7247\u4ed8\u3051\u300d\u306e\u5165\u53e3(/my-cleanup)\u3002wrap-up inbox(vault \u306e inbox/ \u306e\u30ce\u30fc\u30c8\u3002vault \u306e\u7121\u3044\u6a5f\u4f53\u3067\u306f jsonl)\u306b\u6e9c\u307e\u3063\u305f\u672a\u88c1\u5b9a\u306e\u6c17\u3065\u304d\u3068\u3001open Issue \u5168\u4ef6\u3092\u307e\u3068\u3081\u3066 triage \u3057\u3001\u88c1\u5b9a\u304c\u8981\u308b\u9805\u76ee\u306f triage \u30d5\u30a7\u30fc\u30ba\u5185\u3067 AskUserQuestion \u306b\u3088\u308a\u6c7a\u7740\u3055\u305b\u305f\u3046\u3048\u3067\u30011 \u56de\u306e GO(ExitPlanMode)\u5f8c\u306f stacked PR \u3067\u4e00\u62ec\u5bfe\u51e6\u3059\u308b\u624b\u9806\u3002open Issue \u306e\u89aa\u5b50\u306e\u6574\u7406(sub-issue \u5316\u30fb\u8150\u3063\u305f tracking Issue \u306e\u6e05\u7b97\u30fb\u6607\u683c\u5019\u88dc\u306e\u6d17\u3044\u51fa\u3057)\u3082\u3001\u3053\u306e\u624b\u9806\u306e\u4e2d\u306e 1 \u6bb5\u3068\u3057\u3066\u884c\u3046\u3002inbox \u6d88\u5316\u30fbwrapup \u6d88\u5316\u30fbchores \u3092\u307e\u3068\u3081\u3066\u30fb\u96d1\u52d9\u3092\u7247\u4ed8\u3051\u3066\u30fb\u7247\u4ed8\u3051\u3066\u30fb\u6e9c\u307e\u3063\u305f Issue \u3092\u4e00\u6383\u30fbIssue \u6574\u7406\u30fbtracking Issue \u6574\u7406\u30fbIssue \u3092\u675f\u306d\u308b\u30fbsub-issue \u5316\u30fbtracking \u3092\u6e05\u7b97\u3001sweep the wrap-up inbox, batch chores PR, clean up wrapup issues, organize open issues, clean up stale tracking issue \u3068\u3044\u3063\u305f\u6587\u8108\u3067\u4f7f\u3046\u3002\u65b0\u3057\u3044 Tracking Issue \u3092\u66f8\u304f/\u66f4\u65b0\u3059\u308b\u898f\u7d04\u306f `tracking-issue` \u30b9\u30ad\u30eb\u3092\u4f7f\u3046\u3002\u5168\u30ea\u30dd\u30b8\u30c8\u30ea\u306e\u76e3\u67fb\u7d50\u679c\u306e\u305a\u308c\u3092\u4e00\u62ec\u3067\u76f4\u3059\u3068\u304d\u306f `github-audit-triage`\u3001\u4ed6\u30ea\u30dd\u30b8\u30c8\u30ea\u306e Issue \u53c2\u7167\u306e\u9bae\u5ea6\u306f `issue-ref-freshness` \u3092\u3001\u3053\u306e\u624b\u9806\u306e\u4e2d\u304b\u3089\u547c\u3076\u3002"
+}

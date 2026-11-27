@@ -1,0 +1,41 @@
+{
+  "name": "lark-doc",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/lark-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "lark-doc-xiaolinbenben-food4agent",
+  "downloaded_at": "2026-11-27T08:00:13.499835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, docx, markdown",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/lark-doc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/lark-doc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "飞书云文档（Docx / Wiki 文档）：读取和编辑飞书文档内容。当用户给出文档 URL 或 token，或需要查看、创建、编辑文档、插入或下载文档图片附件时使用。文档中嵌入的电子表格、多维表格、画板，先用本 skill 提取 token 再切到对应 skill。当用户给出 doubao.com 的 /docx/ 或 /wiki/ URL/token 时，也应直接使用本 skill；路由依据是 URL 路径模式和 token，而不是域名。不负责文档评论管理，也不负责表格或 Base 的数据操作。当用户明确要操作飞书思维笔记时，也使用本 skill。",
+  "content_fingerprint": "6db1dc9cf6cd78f34c548e40d5cbae116ee46e2b41ff52f36e008065db347b70"
+}

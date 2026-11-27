@@ -1,0 +1,39 @@
+{
+  "name": "cross-build",
+  "repo": "yamatoguro/UniversalKeyboard",
+  "path": ".github/skills/cross-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yamatoguro/UniversalKeyboard",
+  "dir_name": "cross-build",
+  "downloaded_at": "2026-11-27T08:03:58.679123Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yamatoguro",
+  "source_url": "https://github.com/yamatoguro/UniversalKeyboard/blob/main/.github/skills/cross-build/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yamatoguro/UniversalKeyboard/blob/main/.github/skills/cross-build/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Procedimento de build e análise estática: CMake/Ninja por repo, cross-compile para ARM (armhf/arm64), toolchain AVR, sanitizers, cppcheck e clang-tidy.\nTriggers: \"build\", \"compilar\", \"cmake\", \"ninja\", \"cross-compile\", \"toolchain\", \"armhf\", \"arm64\", \"aarch64\", \"avr-gcc\", \"sanitizer\", \"ASan\", \"UBSan\", \"clang-tidy\", \"cppcheck\", \"warnings\".\nNOT for: comportamento de CI (use workflow-release), validação em hardware (use bench-test).",
+  "content_fingerprint": "c6f2087ad233e77bc161a0a5d5b1148b36ae715cbcc3fd296b925a2e96369a9c"
+}

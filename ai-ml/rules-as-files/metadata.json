@@ -1,0 +1,37 @@
+{
+  "name": "rules-as-files",
+  "repo": "tonydzi/claude-bible",
+  "path": "plugin/skills/rules-as-files/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/tonydzi/claude-bible",
+  "dir_name": "rules-as-files",
+  "downloaded_at": "2026-11-27T07:29:34.233636Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tonydzi",
+  "source_url": "https://github.com/tonydzi/claude-bible/blob/main/plugin/skills/rules-as-files/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tonydzi/claude-bible/blob/main/plugin/skills/rules-as-files/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep agent and team rules as one markdown file per rule with a short index line in CLAUDE.md or AGENTS.md. Use when the user states a new rule, asks to slim a bloated CLAUDE.md, resolve conflicting rules, log a declined decision, or argue a no-go verdict as numbered objections."
+}

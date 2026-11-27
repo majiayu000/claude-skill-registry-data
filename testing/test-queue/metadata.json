@@ -1,0 +1,40 @@
+{
+  "name": "test-queue",
+  "repo": "twidxuga/dotfiles",
+  "path": "claude/dot-claude/skills/test-queue/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/twidxuga/dotfiles",
+  "dir_name": "test-queue",
+  "downloaded_at": "2026-11-27T07:34:40.706210Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest, e2e, playwright",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "pytest",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "twidxuga",
+  "source_url": "https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/test-queue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/test-queue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before running tests, typechecks, commits or pushes with heavy git hooks or any other resource-heavy command in a repo that has a configured queue (check with `tq queues`), or when a Bash command was denied with \"Queue <name>\". Runs the command through a machine-wide first-come-first-served queue so only one session at a time loads the laptop."
+}

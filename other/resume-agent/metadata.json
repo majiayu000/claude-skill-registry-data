@@ -1,0 +1,38 @@
+{
+  "name": "resume-agent",
+  "repo": "wycocoyu/cococv",
+  "path": "skills/resume-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wycocoyu/cococv",
+  "dir_name": "resume-agent",
+  "downloaded_at": "2026-11-27T07:57:50.035854Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wycocoyu",
+  "source_url": "https://github.com/wycocoyu/cococv/blob/main/skills/resume-agent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wycocoyu/cococv/blob/main/skills/resume-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guided local-first AI resume builder for CocoCV (Resume-Agent): interview users without an existing resume, read local PDF/Word/Markdown/HTML/JSON resumes directly by path, recommend and preview 21 built-in templates, validate Workspace v2 ResumeData JSON, and export HTML, PNG previews, or PDFs with zero mandatory login (plus optional Web handoff and workspace sync)."
+}

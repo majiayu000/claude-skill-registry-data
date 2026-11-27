@@ -1,0 +1,37 @@
+{
+  "name": "clean",
+  "repo": "yandy-r/ystack",
+  "path": "packages/pi/ycc/skills/clean/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yandy-r/ystack",
+  "dir_name": "clean-yandy-r-ystack-7",
+  "downloaded_at": "2026-11-27T08:04:10.172906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yandy-r",
+  "source_url": "https://github.com/yandy-r/ystack/blob/main/packages/pi/ycc/skills/clean/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yandy-r/ystack/blob/main/packages/pi/ycc/skills/clean/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Removes unnecessary project-directory files with approval. Use when deleting build artifacts, finding unused files, or clearing temporary files."
+}

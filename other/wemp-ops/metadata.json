@@ -1,0 +1,38 @@
+{
+  "name": "wemp-ops",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/wemp-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "wemp-ops",
+  "downloaded_at": "2026-11-27T08:00:14.814005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/wemp-ops/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/wemp-ops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "微信公众号全流程运营：选题→采集→写作→排版→发布→数据分析→评论管理。 Use when: (1) 用户要写公众号文章或提供了选题方向, (2) 用户说\"写一篇关于XXX的文章\"/\"帮我写篇推文\"/\"出一篇稿子\", (3) 用户要求采集热点/素材/竞品分析, (4) 用户提到公众号日报/周报/数据分析/阅读量/粉丝, (5) 用户要求检查评论/回复评论/评论管理, (6) 用户说\"发布\"/\"推送\"/\"推到公众号\"/\"发到草稿箱\", (7) 用户讨论文章排版/封面图/标题优化。 即使用户没有明确说\"公众号\"，只要涉及微信文章写作、内容发布、 公众号后台操作、文章数据查看、或读者互动管理，都应使用此技能。 当用户给出选题方向时，自动完成素材采集→内容写作→封面生图→排版美化→推送草稿箱全流程。",
+  "content_fingerprint": "e69d36f1021bb42a54742ee0c1845b26fffc5c7d9eb9b1c7a625c18840d460ca"
+}

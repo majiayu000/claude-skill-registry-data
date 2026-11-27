@@ -1,0 +1,37 @@
+{
+  "name": "loop-protection-system",
+  "repo": "trevorotts1/openclaw-onboarding",
+  "path": "61-loop-protection-system/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/trevorotts1/openclaw-onboarding",
+  "dir_name": "61-loop-protection-system",
+  "downloaded_at": "2026-11-27T07:32:35.499758Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trevorotts1",
+  "source_url": "https://github.com/trevorotts1/openclaw-onboarding/blob/main/61-loop-protection-system/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trevorotts1/openclaw-onboarding/blob/main/61-loop-protection-system/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The fleet's reflex arc against crash-loops and token furnaces - the single biggest daily problem on client boxes. A deterministic, zero-model-call, host-level watchdog that runs OUTSIDE every OpenClaw session so it survives the very wedges it treats. It adds the three layers Skill 60 (the Early Warning System) deliberately does not do - RESPOND (a per-class quarantine-and-fix engine), PROTECT (circuit breakers on every supervisor and retry path so a loop trips a breaker instead of running for weeks), and HEAL (auto-apply the proven-deterministic fixes, escalate everything ambiguous to Rescue Rangers, never guess). It carries seven loop-specific detectors D1-D7 (restart velocity, idle token-burn rate, repeated-identical-signature, timer re-fire / wedge / orphan-port, self-blocking-run / transcript poison, futile semantic retry burst, and cross-run resend) that Skill 60's S1-S10 lack - D5 being the one that measures a STOCK (how much of a session transcript is ALREADY loop wreckage) rather than a flow, because a paused loop leaves a poisoned transcript that keeps degrading every later turn, consumes Skill 60's ledger read-only, and contributes nothing client-visible. Deterministic Python + stdlib only, one 15-minute cron, CPU-cheap, DRY_RUN observe-only for the first 7 days on any box. It is OPERATED by the openclaw-maintenance department (the watchdog + sweeps), the Healer department (patches the causes so a loop never recurs), and Bugs (keeps the ledger honest). Trigger with \"audit the loop protection\", \"why is this box restarting\", \"is a cron looping\", \"check for idle token burn\", \"install the loop watchdog\", \"verify loop protection\", \"park this unit\", or \"a loop is confirmed - kill it\".",
+  "content_fingerprint": "c84df9ed88d4f49d7871e95f73e85e0065a28cebc48aca932e61fc4f498b96c2"
+}

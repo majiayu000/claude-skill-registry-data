@@ -1,0 +1,37 @@
+{
+  "name": "todo",
+  "repo": "stellakamikaze/arturo",
+  "path": "skills/todo/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/stellakamikaze/arturo",
+  "dir_name": "todo-stellakamikaze-arturo",
+  "downloaded_at": "2026-11-27T07:09:51.560383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "stellakamikaze",
+  "source_url": "https://github.com/stellakamikaze/arturo/blob/main/skills/todo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/stellakamikaze/arturo/blob/main/skills/todo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Legge e modifica i todo della persona con la CLI `arturo todo`: un archivio locale che sopravvive alla sessione, diviso per progetto, scadenza e chi agisce (la persona o Claude)."
+}

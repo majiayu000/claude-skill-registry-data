@@ -1,0 +1,37 @@
+{
+  "name": "taskade-markdown",
+  "repo": "taskade/mcp",
+  "path": "skills/taskade-markdown/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade-markdown",
+  "downloaded_at": "2026-11-27T07:17:45.055427Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/skills/taskade-markdown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/skills/taskade-markdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write a Markdown or CSV file that Taskade turns into a clean project, and tell the user how to bring it in. Writing the file needs no Taskade account and no MCP connection. Use when the user asks for a plan, checklist, outline or task list \"for Taskade\", wants to move notes from another app into Taskade, or asks which Markdown Taskade keeps. For rows with duplicate checks in a project that exists, use taskade-spreadsheet-to-app. For a new app, use taskade-build-app. Not for an export of a Taskade project (the front door taskade reads it)."
+}

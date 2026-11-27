@@ -1,0 +1,37 @@
+{
+  "name": "agent-tooling-authoring",
+  "repo": "tarotene/dotfiles",
+  "path": "config/agents/skills/agent-tooling-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tarotene/dotfiles",
+  "dir_name": "agent-tooling-authoring",
+  "downloaded_at": "2026-11-27T07:17:20.715552Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tarotene",
+  "source_url": "https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/agent-tooling-authoring/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/agent-tooling-authoring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a lesson learned in a work session into a durable coding-agent skill/cases-file/hook entry in this public dotfiles repo, safely (no company-internal details). Use when the user says things like \"\u3053\u306e\u77e5\u898b\u3092\u30b9\u30ad\u30eb\u306b\u3057\u305f\u3044\" \"\u30b9\u30ad\u30eb\u306b\u8ffd\u8a18\u3057\u305f\u3044\" \"dotfiles \u306b\u77e5\u898b\u3092\u8caf\u3081\u305f\u3044\" \"\u899a\u3048\u305f\u3053\u3068\u3092\u6c38\u7d9a\u5316\u3057\u305f\u3044\"\u3001\u307e\u305f\u306f\u65b0\u3057\u3044\u500b\u4eba\u30b9\u30ad\u30eb\u3092\u8a2d\u8a08\u30fb\u8ffd\u52a0\u3057\u3088\u3046\u3068\u3059\u308b\u5834\u9762\u3002"
+}

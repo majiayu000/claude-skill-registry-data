@@ -1,0 +1,36 @@
+{
+  "name": "kbpool",
+  "repo": "twidxuga/dotfiles",
+  "path": "claude/dot-claude/skills/kbpool/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/twidxuga/dotfiles",
+  "dir_name": "kbpool",
+  "downloaded_at": "2026-11-27T07:34:38.334115Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "twidxuga",
+  "source_url": "https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/kbpool/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/kbpool/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to find out what the other live Claude sessions on this machine are working on and which of them knows about a topic, before digging into an unfamiliar area, when a \"kbpool:\" hook note names a peer session, when another session's message asks you something, or when the user asks what the other sessions are doing. Shows each session's current work, ranks sessions by related recent work, and sets out how to ask and answer between sessions with SendMessage."
+}

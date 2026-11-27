@@ -1,0 +1,37 @@
+{
+  "name": "slot-availability",
+  "repo": "tarotene/dotfiles",
+  "path": "config/agents/skills/slot-availability/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tarotene/dotfiles",
+  "dir_name": "slot-availability",
+  "downloaded_at": "2026-11-27T07:17:18.049263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tarotene",
+  "source_url": "https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/slot-availability/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/slot-availability/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u4eba\u304b\u3089\u63d0\u793a\u3055\u308c\u305f\u5019\u88dc\u65e5\u7a0b\u4e00\u89a7(\u8abf\u6574\u3055\u3093\u7b49\u306e\u65e5\u7a0b\u8abf\u6574\u30b5\u30fc\u30d3\u30b9\u3001LINE\u3084\u30e1\u30fc\u30eb\u3067\u306e\u7a7a\u304d\u65e5\u7a0b\u306e\u554f\u3044\u5408\u308f\u305b\u7b49)\u3092\u3001\u30e6\u30fc\u30b6\u30fc\u306e Google Calendar \u3068\u7a81\u304d\u5408\u308f\u305b\u3066\u671d\u30fb\u663c\u30fb\u591c\u306e3\u30b3\u30de\u5358\u4f4d\u3067\u5f53\u305f\u308a\u5224\u5b9a(\u25cb/\u25b3/\u00d7)\u3092\u51fa\u3057\u3001\u62bc\u3055\u3048\u305f\u67a0\u306b\u30de\u30fc\u30ab\u30fc\u4e88\u5b9a\u3092\u4f5c\u308b\u3068\u304d\u306e\u5224\u65ad\u77e5\u8b58\u3002\u7a7a\u304d\u72b6\u6cc1\u3092\u805e\u304b\u308c\u305f\u30fb\u5019\u88dc\u65e5\u7a0b\u306b\u56de\u7b54\u3059\u308b\u30fb\u65e5\u7a0b\u8abf\u6574\u30b5\u30fc\u30d3\u30b9\u306e\u56de\u7b54\u30fb\u8abf\u6574\u3055\u3093\u306e\u56de\u7b54\u30fb\u5019\u88dc\u65e5\u7a0b\u3068\u306e\u5f53\u305f\u308a\u5224\u5b9a\u30fb\u30ab\u30ec\u30f3\u30c0\u30fc\u306b\u4eee\u4e88\u5b9a/\u30de\u30fc\u30ab\u30fc\u3092\u5165\u308c\u3066\u3001\u3068\u3044\u3063\u305f\u6587\u8108\u3067\u4f7f\u3046\u3002scheduling poll, availability check against calendar, respond to a scheduling request, tentative hold on calendar\u3001\u3068\u3044\u3063\u305f\u82f1\u8a9e\u306e\u6587\u8108\u3067\u3082\u4f7f\u3046\u3002\u500b\u4eba\u306e\u624b\u52d5\u78ba\u8a8d\u96fb\u8a71\u306e\u624b\u9806\u306f human-task-scheduling \u3092\u4f7f\u3046 \u2014 \u3053\u3061\u3089\u306f\u8907\u6570\u5019\u88dc\u65e5\u7a0b \u00d7 \u81ea\u5206\u306e\u30ab\u30ec\u30f3\u30c0\u30fc\u306e\u5f53\u305f\u308a\u5224\u5b9a\u306b\u7279\u5316\u3057\u3066\u3044\u308b\u3002\u76f8\u624b\u304c\u5019\u88dc\u4e00\u89a7\u3092\u51fa\u3055\u305a\u300c\u3044\u3064\u7a7a\u3044\u3066\u308b?\u300d\u3068\u3060\u3051\u805e\u304b\u308c\u305f\u3068\u304d\u306f\u3001`enumerate` \u3067\u671f\u9593\u5185\u306e\u5168\u30b3\u30de\u3092\u5019\u88dc\u3068\u3057\u3066\u6a5f\u68b0\u751f\u6210\u3057\u3001\u540c\u3058\u5224\u5b9a\u306b\u6d41\u3057\u3066\u7a7a\u304d\u30b3\u30de\u3092\u51fa\u3059(\u4e0b\u8a18\u300c\u5019\u88dc\u4e00\u89a7\u304c\u7121\u3044\u3068\u304d\u300d)\u3002"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dsh-plugin-build",
+  "repo": "taxueseek/plugin-fast-adapt",
+  "path": "sub-skills/build/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/taxueseek/plugin-fast-adapt",
+  "dir_name": "build-taxueseek-plugin-fast-adapt",
+  "downloaded_at": "2026-11-27T07:18:07.885158Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taxueseek",
+  "source_url": "https://github.com/taxueseek/plugin-fast-adapt/blob/main/sub-skills/build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taxueseek/plugin-fast-adapt/blob/main/sub-skills/build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u4ece\u96f6\u9020\u4e00\u4e2a\u53ef\u8fd0\u884c\u7684 DSH \u63d2\u4ef6\uff0c\u6216\u7ed9\u521a\u5199\u5b8c\u7684\u63d2\u4ef6\u8fc7\u4f53\u68c0\u95e8\u3002scaffold \u4e00\u6761\u547d\u4ee4\u51fa\u4e94\u5f62\u6001\uff08tool/hook/service/config/llm-adapter\uff09\u5b8c\u6574\u5165\u53e3\u3001cordis.patch.yml \u6302\u8f7d\u5c42\u3001\u547d\u540d\u6295\u5f71\u4e0e README\uff0c\u751f\u6210\u5373\u9a8c\u8bc1\uff08\u5185\u5b58\u5192\u70df\u52a0\u771f\u57fa\u7c7b\u88c5\u8f7d\uff09\uff1bquick-smoke \u79d2\u9a8c\u6a21\u5757\u52a0\u8f7d\u3001apply \u5951\u7ea6\u4e0e\u5de5\u5177\u6ce8\u518c\uff0c\u6309\u771f Cordis \u5951\u7ea6\u62e6\u672a\u58f0\u660e inject \u7684\u8bbf\u95ee\uff1bwrite-gate \u51fa\u51fa\u751f\u8bc1\uff0c\u786c\u95e8\u7981\u81ea\u52a8\u5224\u3001\u8f6f\u6307\u6807\u900f\u4f20\u5f85\u88c1\u91cf\u3002\u89e6\u53d1\u8bcd\uff1a\u521b\u5efa DSH \u63d2\u4ef6\u3001\u5199 DSH \u63d2\u4ef6\u3001\u63d2\u4ef6\u811a\u624b\u67b6\u3001\u63d2\u4ef6\u6a21\u677f\u3001\u4ece\u96f6\u505a\u63d2\u4ef6\u3001\u4e94\u5f62\u6001\u3001\u547d\u540d\u6295\u5f71\u3001\u6302\u8f7d\u5c42\u3001\u63d2\u4ef6\u51fa\u751f\u8bc1\u3001write-gate\u3001\u63d2\u4ef6\u5192\u70df\u6d4b\u8bd5\u3001\u88c5\u5b8c\u4e0d\u751f\u6548\u5148\u9a8c\u4e00\u904d\u3002"
+}

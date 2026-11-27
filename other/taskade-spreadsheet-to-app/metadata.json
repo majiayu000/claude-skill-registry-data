@@ -1,0 +1,37 @@
+{
+  "name": "taskade-spreadsheet-to-app",
+  "repo": "taskade/mcp",
+  "path": "skills/taskade-spreadsheet-to-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade-spreadsheet-to-app",
+  "downloaded_at": "2026-11-27T07:17:46.657943Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/skills/taskade-spreadsheet-to-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/skills/taskade-spreadsheet-to-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a CSV or Excel file into a Taskade project or app (leads, contacts, jobs, products, inventory), with the columns as fields, made-up sample rows first, and the real rows after the user says yes, with no duplicates. Use when the user says \"import this spreadsheet\", \"make an app from this CSV\", \"load my leads\", \"add these contacts to my CRM\", \"put this Excel file into Taskade\", or attaches a CSV or XLSX and names a Taskade project or app. Next jobs are taskade-build-app when the user wants a full app with pages and automations, taskade-report for a report on the rows."
+}

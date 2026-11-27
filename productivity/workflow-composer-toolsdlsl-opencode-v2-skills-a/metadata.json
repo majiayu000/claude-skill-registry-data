@@ -1,0 +1,39 @@
+{
+  "name": "workflow-composer",
+  "repo": "toolsdlsl/Opencode-V2-Skills-Agents",
+  "path": "skills/workflow-composer/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/toolsdlsl/Opencode-V2-Skills-Agents",
+  "dir_name": "workflow-composer-toolsdlsl-opencode-v2-skills-a",
+  "downloaded_at": "2026-11-27T07:30:48.637340Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "toolsdlsl",
+  "source_url": "https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/workflow-composer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/workflow-composer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\"MANDATORY: Read this skill before planning or calling search, fetch, or agent when the current task needs its own research, browsing, or judgment for each of 5 or more independent, comparable items (10 or more: always fan out), or when the user asks for comprehensive coverage, parallel research, or subagents. Use `workflow/run` (the `run` tool on the `workflow` MCP server, called with the `mcp` tool using server: `workflow`, name: `run`) to compose those internal units: one dedicated agent per item, structured results aggregated back into the current task. Not for shortlists, one question with several facets, work a handful of searches can finish, or the same command over many inputs (write one script with bounded concurrency). Also use for loops, conditions, multi-stage map/reduce work, and deterministic subagent orchestration.\"",
+  "content_fingerprint": "899c09a9f4bcefe21a7c59a56a9c503b218f76376465f8c6ef02ec0d56031e19"
+}

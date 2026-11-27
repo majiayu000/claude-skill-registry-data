@@ -1,0 +1,37 @@
+{
+  "name": "operator",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/operator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "operator-tusharsrivastava-shark-skills",
+  "downloaded_at": "2026-11-27T07:34:23.367812Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/operator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/operator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Session harness. Does small, clear work directly and keeps each fix in scope. For larger work it chooses a mode (feature, review, debug), briefs agents and checks their reports. Use at the start of each session, and when the user says operator, split this work, run lanes or brief an agent."
+}

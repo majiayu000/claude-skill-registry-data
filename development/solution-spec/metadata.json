@@ -1,0 +1,38 @@
+{
+  "name": "solution-spec",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/solution-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "solution-spec",
+  "downloaded_at": "2026-11-27T07:34:23.727473Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/solution-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/solution-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Closes a spec before shark:code-writer builds it - the guards on the path, the input classes, the operations on the state, a behaviour table with one test for each row, the decided questions, and an adversarial check. Use after a root cause analysis, or before a round of code-writer lanes."
+}

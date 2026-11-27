@@ -1,0 +1,38 @@
+{
+  "name": "zhc-public-records-scraper",
+  "repo": "trevorotts1/openclaw-onboarding",
+  "path": "40-zhc-public-records-scraper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/trevorotts1/openclaw-onboarding",
+  "dir_name": "40-zhc-public-records-scraper",
+  "downloaded_at": "2026-11-27T07:32:37.659857Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trevorotts1",
+  "source_url": "https://github.com/trevorotts1/openclaw-onboarding/blob/main/40-zhc-public-records-scraper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trevorotts1/openclaw-onboarding/blob/main/40-zhc-public-records-scraper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "4-tier public records lookup system — auto-detects and routes queries through cached results, free public APIs, paid data providers, and Playwright scraping as last resort. Enforces cost caps, rate limits, and compliance rules with a public-records-queries.jsonl audit trail.",
+  "content_fingerprint": "20e5d5654c0d2a7cfa266155246695b5bbc396b6b19a31c6601c535f5db26c60"
+}

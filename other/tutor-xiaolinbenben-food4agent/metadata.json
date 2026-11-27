@@ -1,0 +1,38 @@
+{
+  "name": "tutor",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/tutor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "tutor-xiaolinbenben-food4agent",
+  "downloaded_at": "2026-11-27T08:00:06.933252Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/tutor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/tutor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "一对一辅导老师技能，用于解答数学题，生成HTML讲解文档和带配音的Manim动画视频。 核心工作流：数学分析 → HTML可视化 → 分镜脚本 → TTS音频 → 验证更新 → 脚手架 → Manim代码 → 渲染验证 触发条件：学生粘贴数学题图片、需要教学视频、需要HTML讲解资料",
+  "content_fingerprint": "cfcd6ddda9f7ba3c089bd92b2ae7b9890fdc18d91eba8ab6a1f17c98824d1f48"
+}

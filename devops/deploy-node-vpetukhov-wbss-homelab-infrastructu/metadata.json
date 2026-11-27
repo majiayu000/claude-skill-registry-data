@@ -1,0 +1,37 @@
+{
+  "name": "deploy-node",
+  "repo": "vpetukhov-wbss/homelab-infrastructure",
+  "path": ".claude/skills/deploy-node/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/vpetukhov-wbss/homelab-infrastructure",
+  "dir_name": "deploy-node-vpetukhov-wbss-homelab-infrastructu",
+  "downloaded_at": "2026-11-27T07:44:23.933375Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: docker, deploy",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vpetukhov-wbss",
+  "source_url": "https://github.com/vpetukhov-wbss/homelab-infrastructure/blob/main/.claude/skills/deploy-node/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vpetukhov-wbss/homelab-infrastructure/blob/main/.claude/skills/deploy-node/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy or converge a HomeLab node safely from inventory using Ansible and validate the live result."
+}

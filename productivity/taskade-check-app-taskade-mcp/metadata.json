@@ -1,0 +1,38 @@
+{
+  "name": "taskade-check-app",
+  "repo": "taskade/mcp",
+  "path": "plugins/taskade/skills/taskade-check-app/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade-check-app-taskade-mcp",
+  "downloaded_at": "2026-11-27T07:17:47.265494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/plugins/taskade/skills/taskade-check-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/plugins/taskade/skills/taskade-check-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check the health of the user's Taskade Genesis apps and get one table of pages, lists and automations, each marked pass, fail or not checked, with the fix for each fail and the most urgent fix first. Reads only, changes nothing. Use when the user says \"is my app OK\", \"check my apps\", \"health check\", \"what do I fix first\", \"audit my app\", \"is my app ready to share\", or before a release. When the user names one problem to fix, use taskade-fix-app instead. Next jobs are taskade-fix-app for a fix in the app code, taskade-secure-app for who can sign in, taskade-fix-first-screen for the first screen, taskade-publish-app to release."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "zhc-early-warning-system",
+  "repo": "trevorotts1/openclaw-onboarding",
+  "path": "60-zhc-early-warning-system/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/trevorotts1/openclaw-onboarding",
+  "dir_name": "60-zhc-early-warning-system",
+  "downloaded_at": "2026-11-27T07:32:36.602817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trevorotts1",
+  "source_url": "https://github.com/trevorotts1/openclaw-onboarding/blob/main/60-zhc-early-warning-system/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trevorotts1/openclaw-onboarding/blob/main/60-zhc-early-warning-system/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The fleet Early Warning System, a deterministic, zero-model-call sentinel that runs on every OpenClaw box and tells the OPERATOR (never the client) the moment something breaks or drifts. It pins a per-box baseline, tails the native config-audit event stream, and detects ten failure classes the fleet has actually suffered - a silent model or paid-provider downgrade, a runtime fallback the config never shows, a subtractive compaction misconfig that will crash the box, a safety-cap raised without sign-off, heartbeat/idle furnace token-burn in BOTH subscription and metered billing, a root-owned config write that freezes the gateway, a dark dashboard or tunnel, a secret shape leaked into a transcript, a stale skills downgrade, and a client-spamming announce cron. Every config write is snapshotted with a one-line revert command placed in the operator's hand; it never auto-changes a client box by default (alert-only fleet-wide). One skill directory holds BOTH the per-box sentinel and the companion that can audit, install, verify, and troubleshoot the sentinel on any box, plus the operator-box aggregator with a dead-man switch for boxes too broken to self-report. Zero model calls, one cron, CPU-cheap, operator-verbose and client-silent by construction. Trigger with \"audit the early warning system\", \"why did the model switch\", \"install the sentinel\", \"did a safety cap get raised\", \"check for idle token burn\", \"verify the early warning system\", \"run the fleet digest\", or \"revert the last config change\".",
+  "content_fingerprint": "f48fb704da70bc1571e97d669b559c5a4aa232f566dec0d4fa9d714930995de3"
+}

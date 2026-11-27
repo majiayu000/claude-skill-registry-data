@@ -1,0 +1,38 @@
+{
+  "name": "fapiao",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/fapiao/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "fapiao",
+  "downloaded_at": "2026-11-27T08:00:08.606631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, markdown",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/fapiao/SKILL.md",
+  "license": "Proprietary. LICENSE.txt has complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/fapiao/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "发票专用解析技能。支持中国增值税发票、普通发票、电子发票的结构化提取。基于 pdfjs-dist 实现坐标提取，可提取发票号码、日期、买卖双方信息、商品明细、金额等字段。",
+  "content_fingerprint": "0c1bfdd2fb0a8259e0d78f6edd30243941c5729852ff0436fe8a54edb7793bad"
+}

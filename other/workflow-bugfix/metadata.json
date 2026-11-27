@@ -1,0 +1,37 @@
+{
+  "name": "workflow-bugfix",
+  "repo": "yamatoguro/UniversalKeyboard",
+  "path": ".github/skills/workflow-bugfix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yamatoguro/UniversalKeyboard",
+  "dir_name": "workflow-bugfix",
+  "downloaded_at": "2026-11-27T08:03:59.351383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "context"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yamatoguro",
+  "source_url": "https://github.com/yamatoguro/UniversalKeyboard/blob/main/.github/skills/workflow-bugfix/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yamatoguro/UniversalKeyboard/blob/main/.github/skills/workflow-bugfix/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Workflow de correção de defeito em embarcados: reprodução obrigatória, teste que falha antes da correção, análise de causa raiz em camadas, correção mínima, verificação de regressão e registro.\nTriggers: \"bug\", \"defeito\", \"corrigir\", \"falha\", \"não funciona\", \"tecla presa\", \"modificador travado\", \"tecla fantasma\", \"layout errado\", \"tela não atualiza\", \"CRC\", \"regressão\".\nNOT for: funcionalidade nova (use workflow-feature), investigação sem reprodução (comece por reproduzir).",
+  "content_fingerprint": "62b334763211b1ca548bacd869bb8abe35d8cf11ee79569da3cf5df3d640d6ca"
+}

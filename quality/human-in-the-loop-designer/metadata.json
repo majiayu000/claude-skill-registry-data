@@ -1,0 +1,38 @@
+{
+  "name": "human-in-the-loop-designer",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/ai-ux-design/human-in-the-loop-designer/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "human-in-the-loop-designer",
+  "downloaded_at": "2026-11-27T07:39:53.633589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/human-in-the-loop-designer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/human-in-the-loop-designer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs the human-in-the-loop (HITL) layer of an agent workflow - checkpoints, approval gates, escalation paths, and agent-to-human handoffs - with an interruption-cost budget and review-fatigue limits for each reviewer role. Use when mapping where a human must review an agent's work; designing escalation from an agent to a person; users are rubber-stamping approvals; or an agent workflow is stalling waiting for human input."
+}

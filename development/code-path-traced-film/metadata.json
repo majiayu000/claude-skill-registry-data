@@ -1,0 +1,39 @@
+{
+  "name": "code-path-traced-film",
+  "repo": "vargHQ/skills",
+  "path": "code-path-traced-film/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "code-path-traced-film",
+  "downloaded_at": "2026-11-27T07:39:19.096894Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, software, compile",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/code-path-traced-film/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/code-path-traced-film/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a short animated film in which everything is code the agent writes, including the renderer: a path tracer in one WebGL2 shader (no Blender, no three.js, no meshes, no textures), characters and props as signed distance fields, a meadow of analytic curved grass blades, moon, firefly and window lights with soft shadows, depth of field and motion blur, a variance-guided denoiser, a score synthesized in numpy from the same timeline, captions and an encode. Includes the complete tested film \"The Smallest Star\" (70 s, 11 shots, two characters) as a starter, a live page that runs the same renderer in the browser, and the speed-ups and traps found while making it. Use when someone asks for a film, short or music piece \"made entirely in code\", \"write your own renderer / ray tracer / path tracer and make a film with it\", a storybook or clay-diorama 3D short without Blender, a \"no assets, no video model\" showcase of what a coding model can do, or a remake of The Smallest Star with another story. Not for a Blender film (blender-code-film), a three.js explainer (code-3d-explainer), recording a browser game (code-game-trailer), 2D motion graphics (kinetic-type-art, hyperframes) or AI-generated footage (varg-ai)."
+}

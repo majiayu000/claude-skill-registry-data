@@ -1,0 +1,37 @@
+{
+  "name": "inspection-to-capa",
+  "repo": "thevibeworks/claude-code-docs",
+  "path": "content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/inspection-to-capa/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/thevibeworks/claude-code-docs",
+  "dir_name": "inspection-to-capa",
+  "downloaded_at": "2026-11-27T07:24:19.529190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thevibeworks",
+  "source_url": "https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/inspection-to-capa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/inspection-to-capa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs the quality chain end to end: writes the nonconformance against the requirement it violates, searches history at the moment of writing to say whether this has happened before and whether the last fix held, reads sensor and inspection data on one verified timeline, proposes ranked candidate causes with evidence for and against, drafts the 8D, and produces the customer pack behind a redaction diff. Use when someone says \"run the CAPA chain,\" \"take this nonconformance through to an 8D,\" \"inspection to CAPA,\" or asks for the full corrective-action workflow."
+}

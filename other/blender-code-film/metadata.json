@@ -1,0 +1,37 @@
+{
+  "name": "blender-code-film",
+  "repo": "vargHQ/skills",
+  "path": "blender-code-film/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "blender-code-film",
+  "downloaded_at": "2026-11-27T07:39:18.172149Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/blender-code-film/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/blender-code-film/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a short 3D film in Blender written entirely in Python by an agent (Claude Fable 5.2, Claude Code, Codex): the shots and the look as data, a world built from code (procedural terrain, hundreds of instanced props, node materials, lights, haze), one camera per shot bound to timeline markers, a stills-first approval pass, a quarter-size draft, a contact-sheet audit, a fresh critic subagent, then the final render to PNG frames and an ffmpeg encode with an optional varg music bed. Includes a tested starter (scripts/film.py, a 9 s three-shot film) and the Blender 5.x traps that turn frames black. Use when someone asks for a Blender animation or film made with code or Python, \"make a video in Blender with Claude\", a 3D short, music video, toy commercial or product film rendered in Blender, a low-poly or storybook 3D film, or a remake of a viral Fable 5.2 Blender video. Not for previz that feeds Seedance (code-to-video-previz, varg-previz), three.js films in the browser (karpathy-3d-story, code-3d-explainer), recording a browser game (code-game-trailer), 2D motion graphics (hyperframes, kinetic-type-art) or AI-generated footage (varg-ai)."
+}

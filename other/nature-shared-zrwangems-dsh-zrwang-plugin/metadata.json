@@ -1,0 +1,37 @@
+{
+  "name": "nature-shared",
+  "repo": "zrwangems/dsh-zrwang-plugin",
+  "path": "skills/research/nature-skills/nature-shared/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zrwangems/dsh-zrwang-plugin",
+  "dir_name": "nature-shared-zrwangems-dsh-zrwang-plugin",
+  "downloaded_at": "2026-11-27T08:19:14.513304Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zrwangems",
+  "source_url": "https://github.com/zrwangems/dsh-zrwang-plugin/blob/main/skills/research/nature-skills/nature-shared/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zrwangems/dsh-zrwang-plugin/blob/main/skills/research/nature-skills/nature-shared/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Internal shared-reference support package for installed Nature Skills, including nature-writing, nature-polishing, nature-response, nature-reader, and nature-paper2ppt. Do not invoke it as a standalone user workflow. Load only the specific core or journal-format file requested by another Nature skill."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "security",
+  "repo": "tinkerbench-studio/tick-it-claude-mod",
+  "path": ".tick-it/skills/security/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/tinkerbench-studio/tick-it-claude-mod",
+  "dir_name": "security",
+  "downloaded_at": "2026-11-27T07:27:19.083242Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: infra, infrastructure",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tinkerbench-studio",
+  "source_url": "https://github.com/tinkerbench-studio/tick-it-claude-mod/blob/main/.tick-it/skills/security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tinkerbench-studio/tick-it-claude-mod/blob/main/.tick-it/skills/security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Looks for security problems the change brings in",
+  "content_fingerprint": "d8fe3d8f579c52d69e5d81f877b5f9877fe75f7693a6cc4fcf5c3bfd7ce6b3e5"
+}

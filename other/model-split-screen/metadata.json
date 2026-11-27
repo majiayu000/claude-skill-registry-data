@@ -1,0 +1,37 @@
+{
+  "name": "model-split-screen",
+  "repo": "vargHQ/skills",
+  "path": "model-split-screen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "model-split-screen",
+  "downloaded_at": "2026-11-27T07:39:18.629135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/model-split-screen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/model-split-screen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make the \"same prompt, two models\" comparison video that every model launch produces (Claude Fable 5.2 vs Opus 5.5, Seedance vs Kling, Eevee vs Cycles): run one prompt twice under the same rules, log the real time and cost of each run, then lay the two results side by side (1920\u00d71080) or stacked (1080\u00d71920), started on the same frame, each with its name and its time and cost under it, optionally blind (\"A\" and \"B\" until the last seconds, then the reveal) and with a winner frame. scripts/split.py does the layout with ffmpeg and Pillow, so it works with an ffmpeg built without drawtext. Use when someone asks for a model comparison video, \"Fable vs Opus\", \"same prompt two models\", a side-by-side or split-screen comparison with cost and time, a blind \"guess which one\" test, or A/B of two renders or two edits. Not for a split screen inside a story edit (varg-video-edit-library), comparing many models in a grid of stills (gpt-image-2-6), or making the clips themselves (blender-code-film, code-game-trailer, varg-ai)."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "issue-ref-freshness",
+  "repo": "tarotene/dotfiles",
+  "path": "config/agents/skills/issue-ref-freshness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tarotene/dotfiles",
+  "dir_name": "issue-ref-freshness",
+  "downloaded_at": "2026-11-27T07:17:18.658808Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tarotene",
+  "source_url": "https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/issue-ref-freshness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/issue-ref-freshness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u30b3\u30fc\u30c9\u30fbdocs\u30fbIssue \u672c\u6587\u306b\u3042\u308b\u4ed6\u30ea\u30dd\u30b8\u30c8\u30ea\u306e issue/PR \u53c2\u7167\u306e\u3046\u3061\u3001\u66f8\u304b\u308c\u305f\u5f53\u6642\u306f Open \u524d\u63d0\u3060\u3063\u305f\u3082\u306e\u306e\u73fe\u72b6\u3092\u7167\u5408\u3057\u3001\u53c2\u7167\u5148\u306e\u88c1\u5b9a(close\u30fbmerge\u30fbnot planned)\u3092\u8aad\u3093\u3067\u8a00\u53ca\u5143\u306e\u8a18\u8ff0\u3092\u73fe\u72b6\u306b\u5408\u308f\u305b\u3066\u66f8\u304d\u76f4\u3059\u624b\u9806\u3002\u300cupstream \u304c\u5bfe\u5fdc\u3057\u305f\u3089\u843d\u3068\u3059\u300d\u300cdrop once ... lands\u300d\u300cupstream \u5bfe\u5fdc\u5f85\u3061\u300d\u300cRemove once ... is fixed\u300d\u300c\u301c\u306e\u4fee\u6b63\u3092\u5f85\u3063\u3066\u3044\u308b\u300d\u578b\u306e\u8a18\u8ff0\u306b\u4f5c\u696d\u4e2d\u306b\u89e6\u308c\u305f\u3068\u304d\u3001\u81ea\u5206\u304c upstream \u306b\u8d77\u7968\u3057\u305f issue \u304c\u9589\u3058\u3089\u308c\u3066\u3044\u305f\u3068\u6c17\u3065\u3044\u305f\u3068\u304d\u3001\u300c\u53c2\u7167\u306e\u9bae\u5ea6\u70b9\u691c\u300d\u300c\u5916\u90e8 issue \u53c2\u7167\u3092\u70b9\u691c\u300d\u3092\u983c\u307e\u308c\u305f\u3068\u304d\u306b\u4f7f\u3046\u3002stale upstream reference, drop once lands, workaround waiting on upstream, upstream issue closed, check referenced issues\u3001\u3068\u3044\u3063\u305f\u82f1\u8a9e\u306e\u6587\u8108\u3067\u3082\u4f7f\u3046\u3002Issue \u672c\u6587\u3092\u6b63\u672c\u3068\u3057\u3066\u4fdd\u3064\u4e00\u822c\u7fd2\u6163\u306f living-description\u3001\u88c1\u5b9a\u306b\u6c17\u3065\u304f\u305f\u3081\u306e\u901a\u77e5\u306e\u53ef\u8996\u5316\u306f\u3053\u306e\u30b9\u30ad\u30eb\u306e\u5bfe\u8c61\u5916\u3002"
+}

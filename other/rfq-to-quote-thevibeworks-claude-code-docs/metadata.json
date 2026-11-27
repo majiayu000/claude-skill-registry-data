@@ -1,0 +1,38 @@
+{
+  "name": "rfq-to-quote",
+  "repo": "thevibeworks/claude-code-docs",
+  "path": "content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/rfq-to-quote/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thevibeworks/claude-code-docs",
+  "dir_name": "rfq-to-quote-thevibeworks-claude-code-docs",
+  "downloaded_at": "2026-11-27T07:24:17.795650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "pdf",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thevibeworks",
+  "source_url": "https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/rfq-to-quote/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/rfq-to-quote/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs the whole RFQ-to-quote chain end to end: reads the inquiry and its drawings, checks it against what the plant can build, drafts the questions back, returns a provisional bid/no-bid, pulls cost history, routings and closed-job actuals, builds an internal estimating model in Fusion where connected (from the drawing, a prior part's model saved as new, text specs as a ROM only, or a STEP file), derives machine hours per operation with each hour's basis labelled, and drafts the quote with its cost basis shown. Four approval gates, and the chain pauses for days while the customer answers. Use when someone says \"run the RFQ chain,\" \"take this RFQ all the way to a quote,\" \"quote this end to end,\" \"quote this from the drawing,\" or names an inquiry and asks for the full workflow."
+}

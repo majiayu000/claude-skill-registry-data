@@ -1,0 +1,38 @@
+{
+  "name": "handoff",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "handoff-tusharsrivastava-shark-skills",
+  "downloaded_at": "2026-11-27T07:34:22.888938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/handoff/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/handoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Records and prunes the handoff file, the state that carries between sessions. Use at the end of a session, before a context reset, or when the user asks where things stand."
+}

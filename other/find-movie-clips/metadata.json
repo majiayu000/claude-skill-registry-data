@@ -1,0 +1,37 @@
+{
+  "name": "find-movie-clips",
+  "repo": "vargHQ/skills",
+  "path": "find-movie-clips/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "find-movie-clips",
+  "downloaded_at": "2026-11-27T07:39:17.996640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/find-movie-clips/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/find-movie-clips/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds the video clip of a movie or TV scene and turns it into one clean reference take for an AI remake, a parody, an edit or a motion-control run. Covers which clip database fits a quote, a film and scene, a look or a character; which of them an agent may fetch and which only a person opens; a tested yt-dlp search and download; cutting straight from a public-domain film on the Internet Archive; a script that splits a scene into uncut takes with a contact sheet; the rules for a take a video model can follow; and a rights check. Use when someone asks where to find movie clips, film scene references, a scene by its quote, scene packs, a reference video for Seedance, Kling Motion Control, MiniMax Recast or Higgsfield Genjutsu, or says the source has cuts, watermarks or black bars. For still frames use find-references; for the remake itself use scene-recast-video."
+}

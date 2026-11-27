@@ -1,0 +1,37 @@
+{
+  "name": "official-document-verification",
+  "repo": "wxxb789/hoa",
+  "path": "skills/research-writing/official-document-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "official-document-verification",
+  "downloaded_at": "2026-11-27T07:57:45.127312Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/research-writing/official-document-verification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/research-writing/official-document-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify the exact wording of a bill, statute, audit report or regulator notice against the authoritative edition. When a disputed clause was added, removed or renumbered, pin the print, search section and subject, and separate publication status from text. Not for ghc-search."
+}

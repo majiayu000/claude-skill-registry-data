@@ -1,0 +1,38 @@
+{
+  "name": "backport",
+  "repo": "yandy-r/ystack",
+  "path": "packages/pi/ycc/skills/backport/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/yandy-r/ystack",
+  "dir_name": "backport-yandy-r-ystack",
+  "downloaded_at": "2026-11-27T08:04:10.615136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yandy-r",
+  "source_url": "https://github.com/yandy-r/ystack/blob/main/packages/pi/ycc/skills/backport/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yandy-r/ystack/blob/main/packages/pi/ycc/skills/backport/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Backports merged trunk PRs to maintenance branches. Use when backporting a fix, opening backport PRs, or auditing pending backports."
+}

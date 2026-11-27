@@ -1,0 +1,37 @@
+{
+  "name": "tmux-agent-control",
+  "repo": "wxxb789/hoa",
+  "path": "skills/engineering/tmux-agent-control/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "tmux-agent-control",
+  "downloaded_at": "2026-11-27T07:57:42.626011Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/engineering/tmux-agent-control/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/engineering/tmux-agent-control/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take over or monitor an interactive coding agent in a tmux pane. When asked to send the next prompt after the current turn, find the process and pane, read its terminal state and wait until the TUI is idle before sending the whole instruction. Not for launching a headless coding CLI."
+}

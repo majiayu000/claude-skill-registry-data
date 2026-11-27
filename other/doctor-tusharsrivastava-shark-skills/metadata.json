@@ -1,0 +1,37 @@
+{
+  "name": "doctor",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/doctor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "doctor-tusharsrivastava-shark-skills",
+  "downloaded_at": "2026-11-27T07:34:22.551790Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/doctor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/doctor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks the tools that shark needs in this project (the mcp-debugger server, the debug adapter of each language, the code-health analyzers, rules, rows and baseline, the guard sections), shows one table, and installs the pinned fixes into the shark tool folder after a yes. Use when the user says doctor, check the shark tools, or after a new machine, a new language or a plugin update."
+}

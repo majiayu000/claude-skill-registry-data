@@ -1,0 +1,37 @@
+{
+  "name": "taskade-secure-app",
+  "repo": "taskade/mcp",
+  "path": "plugins/taskade/skills/taskade-secure-app/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade-secure-app-taskade-mcp",
+  "downloaded_at": "2026-11-27T07:17:47.812065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "automation",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/plugins/taskade/skills/taskade-secure-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/plugins/taskade/skills/taskade-secure-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a Taskade Genesis app safe to share with a guided check, so that private lists stay private, a visitor can add only what the owner allows, and the owner knows who can sign in. It reads the app code and the lists. When the server lists the access tools, it reads who can read and write each list, and sets the sign-up of the app with a preview and the owner's yes. Without them, it names the 2 settings for the owner to confirm in the Publish menu in Taskade (\"Who can open it\" and \"Who can use this app's data\"). It gives the fix for each risk. Use when the user says \"who can see my app\", \"make my app private\", \"clients see each other\", \"is my app safe to share\", \"lock down my app\", or before the first publish. For a full health check of pages and automations, use taskade-check-app instead. Next jobs are taskade-fix-app to fix a page, taskade-fix-flows for an automation, taskade-publish-app to publish after the check."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "comment-cleanup",
+  "repo": "xfontr/monorepo",
+  "path": ".claude/skills/comment-cleanup/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/xfontr/monorepo",
+  "dir_name": "comment-cleanup",
+  "downloaded_at": "2026-11-27T07:58:48.273782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xfontr",
+  "source_url": "https://github.com/xfontr/monorepo/blob/master/.claude/skills/comment-cleanup/SKILL.md",
+  "license": "ISC",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xfontr/monorepo/blob/master/.claude/skills/comment-cleanup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Strip AI-generated comment noise from code \u2014 narration, diff-addressed notes, essayistic justification, facts already written down in a README, stale and bloated comments \u2014 while keeping the ones that carry real context. Use this whenever the user asks to clean, prune, tidy, audit or review comments, says there are too many comments or the comments are too verbose or read like essays, asks for a \"comment pass\" or to \"de-AI the comments\", or asks to tidy a file, staged diff or PR before committing. Use it even if they only gesture at it (\"these comments are noise\", \"can you thin these out\")."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "lagune-repair",
+  "repo": "wellwelwel/weslley.io",
+  "path": ".claude/skills/lagune-repair/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wellwelwel/weslley.io",
+  "dir_name": "lagune-repair-wellwelwel-weslley-io",
+  "downloaded_at": "2026-11-27T07:49:35.591943Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/weslley.io/blob/main/.claude/skills/lagune-repair/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/weslley.io/blob/main/.claude/skills/lagune-repair/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Repair Lagune's internal tracking so each item stays whole when files are renamed or moved, and check every memory artifact against its template. A maintenance pass, not a security phase, rewriting the tracking map across all phases in one pass."
+}

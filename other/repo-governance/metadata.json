@@ -1,0 +1,37 @@
+{
+  "name": "repo-governance",
+  "repo": "tarotene/dotfiles",
+  "path": "config/agents/skills/repo-governance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tarotene/dotfiles",
+  "dir_name": "repo-governance",
+  "downloaded_at": "2026-11-27T07:17:17.684513Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tarotene",
+  "source_url": "https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/repo-governance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarotene/dotfiles/blob/main/config/agents/skills/repo-governance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bootstrap or replicate battle-tested GitHub governance (Security/Quality/Workflow core Rulesets, an opt-in Review ruleset for Copilot code review + required conversation resolution \u2014 ADR-0021 in tarotene/dotfiles \u2014 consolidated CI with the `CI passed` aggregate, release automation, Renovate, git hooks, Justfile) into a Rust workspace (release-plz, MSRV-safe Renovate; telepath reference), a Typst/document repository (cliff.toml), or an Astro site (Biome/Vitest, cog.toml, release-please), picking the language profile rust / typst / astro-site. Use when asked to \"\u6492\u304f\", \"bootstrap governance\", \"apply rulesets\", \"apply GitHub settings\", \"set up release-plz\", \"set up release-please\", \"replicate telepath's CI setup\", \"seed CI to a new Rust repo\", \"seed CI to a new Typst repo\", \"seed CI to a new Astro repo\", \"rulesets / release / renovate \u3092\u307e\u3068\u3081\u3066\u9069\u7528\", \"telepath \u306e GitHub \u8a2d\u5b9a\u3092\u5225\u30ea\u30dd\u30b8\u30c8\u30ea\u306b\u6301\u3063\u3066\u3044\u304f\", \"Typst \u30ea\u30dd\u30b8\u30c8\u30ea\u306b governance \u3092\u64ad\u304f\", or \"Astro \u30b5\u30a4\u30c8\u306b governance \u3092\u64ad\u304f\"."
+}

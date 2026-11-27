@@ -1,0 +1,39 @@
+{
+  "name": "agnos-meta-docs-sync",
+  "repo": "spashx/agnos",
+  "path": ".github/skills/agnos-meta-docs-sync/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/spashx/agnos",
+  "dir_name": "agnos-meta-docs-sync-spashx-agnos",
+  "downloaded_at": "2026-11-27T07:07:17.578848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "spashx",
+  "source_url": "https://github.com/spashx/agnos/blob/master/.github/skills/agnos-meta-docs-sync/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/spashx/agnos/blob/master/.github/skills/agnos-meta-docs-sync/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "AGNOS maintainer skill. Updates CHANGELOG.md, AGENTS.md, CLAUDE.md and the user's guide AGNOS-GETTING-STARTED.md, agnos-init's template, from what changed in the repository since each of them was last changed. USE FOR: before a release, or after a series of tasks, when the entry-point documents may have drifted. Edits the four files only and never commits: the maintainer reviews and commits."
+}

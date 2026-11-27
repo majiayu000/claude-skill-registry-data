@@ -1,0 +1,38 @@
+{
+  "name": "paper-review",
+  "repo": "tirandagan/agentic-paper-reviewer",
+  "path": "skills/paper-review/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/tirandagan/agentic-paper-reviewer",
+  "dir_name": "paper-review",
+  "downloaded_at": "2026-11-27T07:27:31.359792Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tirandagan",
+  "source_url": "https://github.com/tirandagan/agentic-paper-reviewer/blob/main/skills/paper-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tirandagan/agentic-paper-reviewer/blob/main/skills/paper-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Agentic academic paper reviewer modeled on paperreview.ai (by Yixing Jiang and Andrew Ng; independent, not affiliated). Produces a grounded, ICLR-style referee report for a research paper (local PDF, arXiv ID or URL, or LaTeX/Markdown source): retrieves related work from arXiv, critiques it with per-claim grounding, scores 7 dimensions and combines them into a 1-10 overall score. Use when the user asks to review a paper, referee or assess a manuscript, get feedback on a draft before submission, check novelty against prior work, or estimate a paper's acceptance chances."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "rill-artifact",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/rill-artifact/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "rill-artifact",
+  "downloaded_at": "2026-11-27T07:46:01.141054Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, component",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/rill-artifact/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/rill-artifact/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Publish a Rill app as a Claude artifact, a private page on claude.ai that runs the app hydrated in the viewer's browser. Use when asked to share, publish or demo a Rill app (package-rill's to-do example, or another) as an artifact."
+}

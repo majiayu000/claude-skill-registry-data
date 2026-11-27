@@ -1,0 +1,38 @@
+{
+  "name": "taskade-fix-app",
+  "repo": "taskade/mcp",
+  "path": "skills/taskade-fix-app/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade-fix-app",
+  "downloaded_at": "2026-11-27T07:17:44.930342Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/skills/taskade-fix-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/skills/taskade-fix-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and fix a problem in a Taskade Genesis app, one checked change at a time, and prove the fix with the file contents and in the three states of the app (a visitor who is not signed in, the owner in Taskade, a signed-in member). Use when the user says \"my app is broken\", \"fix my app\", \"the page is blank\", \"the button does nothing\", \"data does not show in my app\", \"my clients see an error\", or asks to change text, layout or a field in their Taskade app. Next jobs are taskade-check-app to find what is broken first, taskade-fix-first-screen for the look of the first screen, taskade-publish-app to back up and publish the fix."
+}

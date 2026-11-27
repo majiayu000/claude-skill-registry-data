@@ -1,0 +1,38 @@
+{
+  "name": "kie-callback-relay",
+  "repo": "trevorotts1/openclaw-onboarding",
+  "path": "46-kie-callback-relay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/trevorotts1/openclaw-onboarding",
+  "dir_name": "46-kie-callback-relay",
+  "downloaded_at": "2026-11-27T07:32:33.652841Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, api=2",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trevorotts1",
+  "source_url": "https://github.com/trevorotts1/openclaw-onboarding/blob/main/46-kie-callback-relay/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trevorotts1/openclaw-onboarding/blob/main/46-kie-callback-relay/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Centralized Cloudflare Worker that receives Kie.ai image-generation callbacks for the entire operator fleet, verifies the HMAC signature once, and writes verified results to Worker KV. Client boxes poll the Worker KV endpoint instead of Kie's status API. Implements webhook-primary with a single-poll fallback and crash-safe on-disk task registry. Applies to large decks (above configurable threshold); smaller decks use efficient batch polling per Candidate C of the design.",
+  "content_fingerprint": "c9cfd5caea6a4bbc9c901c7b535e5518e72e99f78d1c75c6f4607e9edf6899fa"
+}

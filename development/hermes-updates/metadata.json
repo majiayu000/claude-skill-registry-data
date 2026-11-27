@@ -1,0 +1,38 @@
+{
+  "name": "hermes-updates",
+  "repo": "wxxb789/hoa",
+  "path": "skills/hermes/hermes-updates/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "hermes-updates",
+  "downloaded_at": "2026-11-27T07:57:40.457946Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/hermes/hermes-updates/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/hermes/hermes-updates/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Upgrade the Hermes installation itself with a snapshot, the official updater and post-upgrade checks. When an unattended timer goes stale, the release checkout lags, dependency sync fails or the CLI will not start, diagnose the upgrade state. Not for hermes-models."
+}

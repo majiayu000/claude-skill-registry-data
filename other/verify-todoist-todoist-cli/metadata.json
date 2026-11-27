@@ -1,0 +1,38 @@
+{
+  "name": "verify",
+  "repo": "todoist/todoist-cli",
+  "path": ".agents/skills/verify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/todoist/todoist-cli",
+  "dir_name": "verify-todoist-todoist-cli",
+  "downloaded_at": "2026-11-27T07:28:55.402933Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "todoist",
+  "source_url": "https://github.com/todoist/todoist-cli/blob/main/.agents/skills/verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/todoist/todoist-cli/blob/main/.agents/skills/verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Proves a change works before it is called done, and reports the evidence on a ladder from \"said\" to \"ran\". Use when you are about to say \"done\", \"fixed\", \"works\" or \"ready\", when asked to check or test a change, or before opening a pull request."
+}

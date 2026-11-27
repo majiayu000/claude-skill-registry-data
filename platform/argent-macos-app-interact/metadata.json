@@ -1,0 +1,38 @@
+{
+  "name": "argent-macos-app-interact",
+  "repo": "software-mansion/argent",
+  "path": "packages/skills/skills/argent-macos-app-interact/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/software-mansion/argent",
+  "dir_name": "argent-macos-app-interact",
+  "downloaded_at": "2026-11-27T07:05:25.531608Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, ios",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "software-mansion",
+  "source_url": "https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-macos-app-interact/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-macos-app-interact/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drive a native Mac app (AppKit, SwiftUI, react-native-macos, Mac Catalyst) through argent. Use when a list-devices entry has platform \"macos\", or the user names a Mac app, a macOS app or a native desktop app. Never for an iOS simulator, an iPhone, or an Electron or Chromium app (platform \"chromium\")."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "review-pr",
+  "repo": "ssharma-sumo/shanu-design-system",
+  "path": ".claude/skills/review-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssharma-sumo/shanu-design-system",
+  "dir_name": "review-pr-ssharma-sumo-shanu-design-system",
+  "downloaded_at": "2026-11-27T07:08:25.059738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssharma-sumo",
+  "source_url": "https://github.com/ssharma-sumo/shanu-design-system/blob/main/.claude/skills/review-pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssharma-sumo/shanu-design-system/blob/main/.claude/skills/review-pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Full PR review. Runs pr-reviewer and a11y-reviewer agents in parallel and merges their findings. Use when asked to review a PR or branch.",
+  "content_fingerprint": "a7526854324d6ad0498a5d16b260ddeed82235fb2ecb0352e7996a1a741fec01"
+}

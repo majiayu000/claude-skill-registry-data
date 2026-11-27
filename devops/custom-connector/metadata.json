@@ -1,0 +1,39 @@
+{
+  "name": "custom-connector",
+  "repo": "thevibeworks/claude-code-docs",
+  "path": "content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/custom-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/thevibeworks/claude-code-docs",
+  "dir_name": "custom-connector",
+  "downloaded_at": "2026-11-27T07:24:18.389959Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: cd, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thevibeworks",
+  "source_url": "https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/custom-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/custom-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Gets the plugin talking to a manufacturing system that has no vendor MCP, working down a seven-tier access ladder in order \u2014 vendor MCP, community MCP, a scoped API wrapper, a read-only database view, a Zapier bridge, screen automation as a last resort, or a scheduled export contract \u2014 and stopping at the highest rung that actually works. States plainly at every rung what the customer gets, what it costs, and how it will eventually break. Most often the answer is that a vendor MCP already exists and nothing needs building \u2014 just an admin turning it on. Maps whatever it reaches onto the consolidated dataset schema, so no downstream skill changes. Credentials never enter the conversation. Use when someone says \"connect our ERP,\" \"we use SAP,\" \"can you reach our MES,\" \"set up a connector for this system,\" or \"our system isn't supported.\""
+}

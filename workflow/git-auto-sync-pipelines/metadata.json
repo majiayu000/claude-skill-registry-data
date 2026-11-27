@@ -1,0 +1,37 @@
+{
+  "name": "git-auto-sync-pipelines",
+  "repo": "wxxb789/hoa",
+  "path": "skills/engineering/git-auto-sync-pipelines/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "git-auto-sync-pipelines",
+  "downloaded_at": "2026-11-27T07:57:43.706375Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: automation, pipeline",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/engineering/git-auto-sync-pipelines/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/engineering/git-auto-sync-pipelines/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Automate unattended Git commits and pushes for a hand-edited notes vault or research repo. When an auto-sync job faces upstream edits or oversized binaries, enforce branch guard, path allowlist, size cap and staged secret scan before rebase and push; add a heartbeat and deduplicated alerts. Not for gdd."
+}

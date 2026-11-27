@@ -1,0 +1,40 @@
+{
+  "name": "wps-api",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/wps-api/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "wps-api",
+  "downloaded_at": "2026-11-27T08:00:12.303773Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, word, docx",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/wps-api/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/wps-api/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "WPS Office COM 自动化 API 参考——通过 Python win32com、VBA、VB.NET、JavaScript 控制 WPS 文字、表格、演示。当用户提到 WPS 办公自动化、WPS 批量处理文档/排版/格式调整、Python 操作 WPS、win32com + WPS、WPS COM 开发、VBA 宏迁移到 Python、公文格式（标题/正文/字体/行距/页边距）、WPS 文字段落遍历、表格单元格读写、查找替换、WPS 导出 PDF、WPS 页面设置、公文自动排版、政府公文/企业报告/标书格式处理、字体设置仿宋/黑体/楷体/方正小标宋简体时，**必须立即使用此技能**。用户可能不会直接说\"COM 自动化\"，而是说\"帮我把这些文档排下版\"\"批量处理文件夹里的公文\"或类似需求——这种情况下也应该触发并使用本技能提供正确的 WPS COM 操作方式。不含通用 Office 文档问题排查（模板/样式损坏等不属于 COM 编程的问题）。",
+  "content_fingerprint": "67ec77fe303621631925ff647c726383babd509fd19dea73bb82c232238bfd6e"
+}

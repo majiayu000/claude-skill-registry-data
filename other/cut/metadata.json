@@ -1,0 +1,38 @@
+{
+  "name": "cut",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/cut/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "cut",
+  "downloaded_at": "2026-11-27T08:00:05.314182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/cut/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/cut/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "控制 剪映 (JianYing/CapCut) 与 Adobe Premiere Pro 两款视频剪辑软件的统一 skill。 让 AI 编程 agent（Codex CLI / Claude Code / OpenCode / Kimi Code / Qwen Code 等任意支持 skill 或 MCP 的工具） 能够读取当前时间轴状态、批量导入素材、裁切片段、添加字幕与转场、混音、并触发导出渲染。 使用本 skill 的场景包括但不限于：用户说\"帮我把这些视频剪一下\"、\"自动给视频加字幕\"、 \"在剪映里把这段切两半\"、\"让 Premiere 把这几个素材按顺序排到时间轴上\"、\"批量加水印\"、 \"导出 1080p\"、\"读取一下我剪映里现在有什么素材\"、\"自动做个 vlog 混剪\"。 涵盖视频剪辑、字幕生成、特效转场、音频处理、批量渲染、跨平台（Windows + macOS）。 只要用户提到 剪映、CapCut、JianYing、Premiere、Pr、视频剪辑、时间轴、轨道、片段、字幕、转场、 调色、混音、渲染导出 等任何视频后期相关词，都应优先使用本 skill。",
+  "content_fingerprint": "ffc7c10b98e09aa0a0430e9c2b3a530e27d86804d4d2d6c6788834ad6f691e6e"
+}

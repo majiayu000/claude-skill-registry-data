@@ -1,0 +1,37 @@
+{
+  "name": "root-cause-capa",
+  "repo": "thevibeworks/claude-code-docs",
+  "path": "content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/root-cause-capa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thevibeworks/claude-code-docs",
+  "dir_name": "root-cause-capa",
+  "downloaded_at": "2026-11-27T07:24:18.082570Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thevibeworks",
+  "source_url": "https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/root-cause-capa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/root-cause-capa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads sensor history, inspection measurements, maintenance records and prior tickets onto one verified timeline, runs the pattern checks in code rather than by eye \u2014 SPC drift, clustering by lot, shift, operator, machine and tool change, correlation with a maintenance event \u2014 then proposes ranked candidate causal chains, each with the evidence for it, the evidence against it, and the test that would confirm or kill it. Drafts the 8D. Where the leading candidate points at purchased material, raises the supplier-caused flag that starts a sourcing action. Use when someone says \"why did this happen,\" \"root cause,\" \"write the 8D,\" \"investigate this nonconformance,\" \"CAPA,\" or \"the customer wants a corrective action report.\""
+}

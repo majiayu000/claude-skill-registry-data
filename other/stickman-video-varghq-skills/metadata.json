@@ -1,0 +1,37 @@
+{
+  "name": "stickman-video",
+  "repo": "vargHQ/skills",
+  "path": "stickman-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "stickman-video-varghq-skills",
+  "downloaded_at": "2026-11-27T07:39:17.670205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/stickman-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/stickman-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a viral stickman video in code, with no video model: a jointed SVG stick figure (round head, two-bone arms and legs with fixed bone lengths, poses written as joint angles) acts out a survival-choice story, a POV story, a \"fake friend vs real friend\" contrast, a history explainer or a stick fight, with a DAY counter, rules that appear one at a time, word-timed captions, procedural sound and a two-choice \"FOLLOW FOR DAY 2\" ending, rendered to a 1080x1920 MP4 with HyperFrames. Ships the working rig (planted-foot walk, breathing idle, head turns, blinks, shock, crouch), script templates with word counts, the fixes for stiff head-only stickman animation, and a 24 s example whose voice cost $0.04 (4 credits). Use when someone asks for a stickman video, stick figure animation, a faceless stickman channel, a survival choice story, POV stickman, or wants to \"make videos like the viral stickman reels\". For Google Flow or Veo clip prompts use kaomei/stickman-video-director instead."
+}

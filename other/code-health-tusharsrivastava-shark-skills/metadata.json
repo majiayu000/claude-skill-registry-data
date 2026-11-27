@@ -1,0 +1,37 @@
+{
+  "name": "code-health",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/code-health/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "code-health-tusharsrivastava-shark-skills",
+  "downloaded_at": "2026-11-27T07:34:21.982957Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/code-health/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/code-health/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "New security, complexity and architecture findings in your changes - how to read the code-health review that blocks your stop when you finish, fix each finding or accept it on purpose, and run the check for a diff. Use with shark:code-authoring when you write or correct code in a project whose AGENTS.md has analyze rows."
+}

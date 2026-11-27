@@ -1,0 +1,37 @@
+{
+  "name": "data-consolidate",
+  "repo": "thevibeworks/claude-code-docs",
+  "path": "content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/data-consolidate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thevibeworks/claude-code-docs",
+  "dir_name": "data-consolidate",
+  "downloaded_at": "2026-11-27T07:24:18.233002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "excel",
+      "xlsx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thevibeworks",
+  "source_url": "https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/data-consolidate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thevibeworks/claude-code-docs/blob/main/content/github/claude-plugins-official/plugins/claude-for-manufacturing/skills/data-consolidate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Joins the plant's scheduled exports and connector data into one working dataset \u2014 ERP items (NetSuite or Infor M3), sales orders, production work orders, purchase orders, inventory, routings and closed-job operation actuals; CMMS assets and maintenance work orders; and the MES, historian, quality and planning files landing in the Microsoft 365 export folder. Keys on part number, production work order, sales order, lot, asset and supplier, classifies every key that fails to match into one of eight mismatch classes, and proposes the correction rather than reporting a count, applying nothing without a yes. Runs file-only with no connector, or connector-only with no files. Use when someone says \"pull the data together,\" \"consolidate the exports,\" \"build the dataset,\" \"join production to the ERP,\" or \"why don't these numbers match,\" and before any reporting or quoting skill runs."
+}

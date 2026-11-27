@@ -1,0 +1,38 @@
+{
+  "name": "database-migrations",
+  "repo": "yverse-studio/claude-setup",
+  "path": ".claude/skills/database-migrations/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/yverse-studio/claude-setup",
+  "dir_name": "database-migrations-yverse-studio-claude-setup",
+  "downloaded_at": "2026-11-27T08:11:20.062766Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yverse-studio",
+  "source_url": "https://github.com/yverse-studio/claude-setup/blob/main/.claude/skills/database-migrations/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yverse-studio/claude-setup/blob/main/.claude/skills/database-migrations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Safe, reversible schema migrations (Postgres, Drizzle, Prisma and more), zero-downtime patterns. Use when writing a migration."
+}

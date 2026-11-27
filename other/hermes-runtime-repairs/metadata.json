@@ -1,0 +1,38 @@
+{
+  "name": "hermes-runtime-repairs",
+  "repo": "wxxb789/hoa",
+  "path": "skills/hermes/hermes-runtime-repairs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "hermes-runtime-repairs",
+  "downloaded_at": "2026-11-27T07:57:42.203374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/hermes/hermes-runtime-repairs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/hermes/hermes-runtime-repairs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fix a generated Hermes wrapper, cron routine or profile at its repository-owned template or generator. When a patch is in Git but the running job is stale, check the staged output, materialize it through the owning repo and read back the authorized deployment. Not for hermes-updates."
+}

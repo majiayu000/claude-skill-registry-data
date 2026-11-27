@@ -1,0 +1,38 @@
+{
+  "name": "code-game-trailer",
+  "repo": "vargHQ/skills",
+  "path": "code-game-trailer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "code-game-trailer",
+  "downloaded_at": "2026-11-27T07:39:18.485719Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software, debug",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/code-game-trailer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/code-game-trailer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a browser game or three.js / WebGL scene an agent built into a cinematic trailer MP4: a virtual clock injected before the page's scripts makes every frame exact at 30 or 60 fps, a director JSON scripts each shot (key and mouse inputs, game setup, trailer camera paths, slow motion, HTML titles and end cards), headless Chrome captures 1920x1080 frames, ffmpeg cuts them on the beat, a music bed (code-written or from varg) is normalised to -14 LUFS, and a checker measures frozen frames, loudness, debug text, third-party names and claims. Includes a tested example game. Use when someone asks for a game trailer, to record my three.js game, a gameplay video, a trailer for my browser game, a Fable 5.2 game video or a fake AAA gameplay trailer. Not for HTML motion graphics (hyperframes), 3D previz for AI video (threejs-animatic), AI-generated footage (varg-ai) or editing existing footage (short-form-ffmpeg-cookbook)."
+}

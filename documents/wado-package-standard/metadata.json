@@ -1,0 +1,37 @@
+{
+  "name": "wado-package-standard",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/wado-package-standard/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "wado-package-standard",
+  "downloaded_at": "2026-11-27T07:46:01.264088Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/wado-package-standard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/wado-package-standard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Where a Wado package keeps each kind of file: the root files, docs/, tests/, tools/, assets/, and what AGENTS.md holds. Read before creating a package, or adding, moving or renaming a file or directory in a `package-*/` directory."
+}

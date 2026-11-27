@@ -1,0 +1,38 @@
+{
+  "name": "read-special-images",
+  "repo": "toolsdlsl/Opencode-V2-Skills-Agents",
+  "path": "skills/read-special-images/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/toolsdlsl/Opencode-V2-Skills-Agents",
+  "dir_name": "read-special-images-toolsdlsl-opencode-v2-skills-a",
+  "downloaded_at": "2026-11-27T07:30:50.404482Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "toolsdlsl",
+  "source_url": "https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/read-special-images/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/read-special-images/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read and OCR long webpage screenshots, panoramas, high-resolution images, and dense documents when whole-image display makes task-relevant text or details unreadable or unreliable. Treat aspect ratio at least 4:1, a side over 4096 px, or area over 16 million pixels only as screening signals, never automatic tiling triggers. Keep any image unsplit when the requested content is already readable, including small ultra-wide images.",
+  "content_fingerprint": "bda0dc4d52e21684ec59ee5afc60091aa666506336cfd10a56ff92dfdfd4fb6c"
+}

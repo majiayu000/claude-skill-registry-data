@@ -1,0 +1,38 @@
+{
+  "name": "book-to-persona-coaching-leadership-system",
+  "repo": "trevorotts1/openclaw-onboarding",
+  "path": "22-book-to-persona-coaching-leadership-system/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/trevorotts1/openclaw-onboarding",
+  "dir_name": "22-book-to-persona-coaching-leadership-system",
+  "downloaded_at": "2026-11-27T07:32:39.194335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trevorotts1",
+  "source_url": "https://github.com/trevorotts1/openclaw-onboarding/blob/main/22-book-to-persona-coaching-leadership-system/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trevorotts1/openclaw-onboarding/blob/main/22-book-to-persona-coaching-leadership-system/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Converts any bestselling book PDF into a dual-purpose persona blueprint - one that coaches humans through personal and professional challenges AND governs AI agents executing professional work across departments. Runs a 3-phase pipeline with dynamic model selection via shared-utils/select_model.py: every phase uses the model the client selected, or the client's configured default model, resolved from the client's own openclaw.json. No model is prescribed by name. Never Anthropic. Output is Gemini Engine-indexed for retrieval. Wiki-enabled for unified knowledge access. Uses the Teach Yourself Protocol before every run.",
+  "content_fingerprint": "e0342fb6487e6614e13ac5e4cbb837f153500bd8c0b0ae89a2b2caa903002b4c"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "taskade-fix-flows",
+  "repo": "taskade/mcp",
+  "path": "skills/taskade-fix-flows/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade-fix-flows",
+  "downloaded_at": "2026-11-27T07:17:45.603644Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "automation",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/skills/taskade-fix-flows/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/skills/taskade-fix-flows/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make the user's Taskade automations work. It reads each automation and its last runs, finds the ones that are off, incomplete or failing, changes the value of a step setting with a preview and the owner's yes, turns an automation on or off with a preview and a yes, and gives the way back. A fix that the tools cannot make, for example a new step, an approval step or a different start, becomes a request for Taskade EVE. Use when the user says \"my automation failed\", \"my automation does not run\", \"it uses too many credits\", \"the email never arrived\", \"turn my automation on\" or \"turn off this automation\". Not for a new automation or one run of an automation now (the front door taskade), a status report of the workspace (taskade-report), or the automations of a kit that the user just copied (taskade-clone-kit)."
+}

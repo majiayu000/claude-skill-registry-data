@@ -1,0 +1,38 @@
+{
+  "name": "workflow-feature",
+  "repo": "yamatoguro/UniversalKeyboard",
+  "path": ".github/skills/workflow-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yamatoguro/UniversalKeyboard",
+  "dir_name": "workflow-feature",
+  "downloaded_at": "2026-11-27T08:03:59.848748Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yamatoguro",
+  "source_url": "https://github.com/yamatoguro/UniversalKeyboard/blob/main/.github/skills/workflow-feature/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yamatoguro/UniversalKeyboard/blob/main/.github/skills/workflow-feature/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Workflow para funcionalidade nova ponta a ponta: entender, decidir (ADR se aplicável), implementar na ordem de dependência entre repos, testar no host, validar em bancada e registrar.\nTriggers: \"nova funcionalidade\", \"implementar feature\", \"adicionar suporte\", \"criar recurso\", \"feature ponta a ponta\", \"adicionar layout\", \"adicionar macro\", \"nova tecla\".\nNOT for: correção de defeito (use workflow-bugfix), release (use workflow-release).",
+  "content_fingerprint": "d156fd84b5e6ce5bf9264d1f2bfe13f75c155932569658f36acae32219406646"
+}

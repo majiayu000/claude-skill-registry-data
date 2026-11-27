@@ -1,0 +1,38 @@
+{
+  "name": "argent-create-e2e",
+  "repo": "software-mansion/argent",
+  "path": "packages/skills/skills/argent-create-e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/software-mansion/argent",
+  "dir_name": "argent-create-e2e",
+  "downloaded_at": "2026-11-27T07:05:23.157503Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: platform=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "software-mansion",
+  "source_url": "https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-create-e2e/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-create-e2e/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, record, edit, replay, or repair reusable Argent e2e test YAML files. Use when the user asks to record, replay, or run an e2e test or a repeatable device path, set up profiling or an A/B comparison, or invoke the authoring engine behind argent-qa-e2e. Also use before repeating three or more interactions. For one-off UI checks, acceptance-driven regression tests, or screen video, use argent-test-ui-flow, argent-qa-e2e, or argent-screen-recording respectively."
+}

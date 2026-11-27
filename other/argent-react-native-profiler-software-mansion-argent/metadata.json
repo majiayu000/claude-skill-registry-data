@@ -1,0 +1,37 @@
+{
+  "name": "argent-react-native-profiler",
+  "repo": "software-mansion/argent",
+  "path": "packages/skills/skills/argent-react-native-profiler/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/software-mansion/argent",
+  "dir_name": "argent-react-native-profiler-software-mansion-argent",
+  "downloaded_at": "2026-11-27T07:05:25.968994Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "software-mansion",
+  "source_url": "https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-react-native-profiler/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-react-native-profiler/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Profile a React Native Hermes app to measure re-render and CPU performance using argent profiler tools. Use when optimizing for performance, measuring before/after a fix, spotting slow components, diagnosing re-renders, checking CPU hotspots, or producing a ranked issue report."
+}

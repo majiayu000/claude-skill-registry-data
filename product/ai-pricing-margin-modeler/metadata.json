@@ -1,0 +1,38 @@
+{
+  "name": "ai-pricing-margin-modeler",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/ai-marketing-growth/ai-pricing-margin-modeler/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "ai-pricing-margin-modeler",
+  "downloaded_at": "2026-11-27T07:39:52.731445Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-marketing-growth/ai-pricing-margin-modeler/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-marketing-growth/ai-pricing-margin-modeler/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds the unit-economics model behind Artificial Intelligence (AI) product pricing: cost per task from tokens, tool calls, retrieval, and retries; a gross-margin floor; a usage-distribution and heavy-user risk analysis; margin comparison across seat, usage, credit, hybrid, and outcome-based packaging; and price-change guardrails. Use when pricing an AI feature or AI-native product; gross margin is falling as usage grows; choosing between per-seat, usage-based, credits, or outcome-based pricing for a model-backed product; modeling the impact of a model or provider change on margin; or a few power users are consuming most of the inference budget."
+}

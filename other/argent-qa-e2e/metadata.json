@@ -1,0 +1,38 @@
+{
+  "name": "argent-qa-e2e",
+  "repo": "software-mansion/argent",
+  "path": "packages/skills/skills/argent-qa-e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/software-mansion/argent",
+  "dir_name": "argent-qa-e2e",
+  "downloaded_at": "2026-11-27T07:05:23.019011Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: platform=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "software-mansion",
+  "source_url": "https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-qa-e2e/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-qa-e2e/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write repeatable QA regression e2e tests from test cases, tickets, or acceptance criteria. Use when the user asks to write, automate, or generate an e2e test or preserve an automated regression scenario, with deterministic setup, stable targets, executable structural or visual evidence, and two consecutive full passes. For one-off UI checks or replayable paths without acceptance criteria, use argent-test-ui-flow or argent-create-e2e. Supports iOS, Android, Chromium, Mac apps, and Vega (Fire TV), where recorded tv-remote steps replace touch directives. Apple TV and Android TV are unsupported; use argent-tv-interact there and report the limitation."
+}

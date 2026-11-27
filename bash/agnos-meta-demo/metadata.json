@@ -1,0 +1,38 @@
+{
+  "name": "agnos-meta-demo",
+  "repo": "spashx/agnos",
+  "path": ".github/skills/agnos-meta-demo/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/spashx/agnos",
+  "dir_name": "agnos-meta-demo",
+  "downloaded_at": "2026-11-27T07:07:16.266005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "spashx",
+  "source_url": "https://github.com/spashx/agnos/blob/master/.github/skills/agnos-meta-demo/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/spashx/agnos/blob/master/.github/skills/agnos-meta-demo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "AGNOS maintainer skill. Builds, rebuilds and verifies agnos-lightweight-process.demo, the simulated two-month demonstration project that shows the AGNOS process applied by a team and serves as the reference to demonstrate and test AGNOS. USE FOR: refreshing the demo after AGNOS evolves, checking it against its requirements, extending its scenario."
+}

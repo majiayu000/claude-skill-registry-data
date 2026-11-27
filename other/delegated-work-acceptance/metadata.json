@@ -1,0 +1,37 @@
+{
+  "name": "delegated-work-acceptance",
+  "repo": "wxxb789/hoa",
+  "path": "skills/engineering/delegated-work-acceptance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "delegated-work-acceptance",
+  "downloaded_at": "2026-11-27T07:57:44.335854Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/engineering/delegated-work-acceptance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/engineering/delegated-work-acceptance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Accept or send back a subagent handoff: inspect artifacts and diff, recount repairs and check patches against assigned folders. For a bug in another worker's directory, reproduce the failing command under the reporter's PATH and cwd, route it to the maintainer who owns the fix, and escalate one scoped landing decision. Not for dispatch."
+}

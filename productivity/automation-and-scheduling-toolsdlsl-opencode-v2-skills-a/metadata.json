@@ -1,0 +1,39 @@
+{
+  "name": "automation-and-scheduling",
+  "repo": "toolsdlsl/Opencode-V2-Skills-Agents",
+  "path": "skills/automation-and-scheduling/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/toolsdlsl/Opencode-V2-Skills-Agents",
+  "dir_name": "automation-and-scheduling-toolsdlsl-opencode-v2-skills-a",
+  "downloaded_at": "2026-11-27T07:30:51.959497Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "toolsdlsl",
+  "source_url": "https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/automation-and-scheduling/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/automation-and-scheduling/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\"Route requests to configure, manage, or redesign future or unattended work to Manus ScheduleTask, Manus Triggers, application-native automation, or an appropriate execution environment. Use for scheduled tasks, reminders, event-driven workflows, condition monitors, bots, and automation architecture decisions. Distinguish an existing automation execution from a setup request; finite current-task jobs do not require automation merely because they run asynchronously.\"",
+  "content_fingerprint": "2c8a153ea84ad48c354d63d3aac2dd174ffd5d5a22b0539749175d66d65d03eb"
+}

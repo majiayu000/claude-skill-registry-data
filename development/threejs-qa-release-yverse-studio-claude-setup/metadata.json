@@ -1,0 +1,39 @@
+{
+  "name": "threejs-qa-release",
+  "repo": "yverse-studio/claude-setup",
+  "path": ".claude/skills/game-3d/refs/threejs-game-skills/threejs-qa-release/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yverse-studio/claude-setup",
+  "dir_name": "threejs-qa-release-yverse-studio-claude-setup",
+  "downloaded_at": "2026-11-27T08:11:21.245124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yverse-studio",
+  "source_url": "https://github.com/yverse-studio/claude-setup/blob/main/.claude/skills/game-3d/refs/threejs-game-skills/threejs-qa-release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yverse-studio/claude-setup/blob/main/.claude/skills/game-3d/refs/threejs-game-skills/threejs-qa-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify and release Three.js browser games: playtest QA, automated bot playtests, mobile and responsive checks, production builds, static-hosting base paths, debug gating, bundle review, screenshots, visual regression baselines, canvas-pixel inspection with measured metrics, and release risk reports."
+}

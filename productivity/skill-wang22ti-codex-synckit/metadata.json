@@ -1,0 +1,38 @@
+{
+  "name": "codexkit-sync",
+  "repo": "wang22ti/codex-synckit",
+  "path": "skill/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/wang22ti/codex-synckit",
+  "dir_name": "skill-wang22ti-codex-synckit",
+  "downloaded_at": "2026-11-27T07:46:35.739204Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task, memory",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wang22ti",
+  "source_url": "https://github.com/wang22ti/codex-synckit/blob/main/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wang22ti/codex-synckit/blob/main/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Export, rebuild, install, and verify a portable Windows CodexKit in OneDrive. Use when the user asks to sync Codex skills, MiniMax skills, hooks, profiles, per-device environment inventories, global memory, Codex automations, plugin inventory, or the memory-maintenance scheduled task across Windows machines; manage the Export-CodexKit PowerShell script; install CodexKit with junctions; clean old CodexKit backups; or explicitly export sessions."
+}

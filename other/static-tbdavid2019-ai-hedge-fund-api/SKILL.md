@@ -1,0 +1,315 @@
+---
+name: ai-hedge-fund
+description: AI Hedge Fund Investment Analysis and Multi-Round Committee Debate API. Continuous feature evolution is active—always fetch the latest live spec at https://hedgeapi.afpicapital.com/skill.md before execution. Provides full-stack equity research from 16 legend investor personas and multi-round round table debates with dynamic portfolio allocation.
+---
+
+# 🤖 AI Hedge Fund API - Agent Skill Guide
+
+> [!IMPORTANT]
+> **Continuous Feature Evolution & Live Spec Policy (即時版本同步提醒)**:
+> This system undergoes active, continuous evolution. AI Agents, LLMs, and automated clients **MUST ALWAYS fetch the latest live version directly from `https://hedgeapi.afpicapital.com/skill.md` (or `https://hedgeapi.afpicapital.com/llms.txt`) before executing any analysis, backtest, or debate**. Never rely on stale cached schemas or hardcoded analyst rosters.
+
+This document is designed for AI Agents and LLMs to understand and interact with the **AI Hedge Fund API**.
+
+- **Server Base URL**: `https://hedgeapi.afpicapital.com`
+- **Latest Live Skill Guide**: `https://hedgeapi.afpicapital.com/skill.md`
+- **LLMs Discovery Index**: `https://hedgeapi.afpicapital.com/llms.txt`
+- **Full Text Specification**: `https://hedgeapi.afpicapital.com/llms-full.txt`
+- **API Documentation**: `https://hedgeapi.afpicapital.com/docs`
+- **Health Check**: `https://hedgeapi.afpicapital.com/api/health`
+- **Swagger JSON**: `https://hedgeapi.afpicapital.com/static/swagger.json`
+- **Supported LLM Engines**: Primary Groq (`openai/gpt-oss-20b`), TypeSafe SystemOne (`clef-flash`, `clef-flash-q4`), Gemini fallback (`models/gemini-flash-latest`), and OpenAI (`gpt-4o`). Resilient auto-failover built-in.
+
+---
+
+## 📌 Available Endpoints
+
+### 1. 📊 Run Stock Analysis (`POST /api/analysis`)
+Execute deep investment analysis across selected AI investor personas with optional multi-round round table committee debate.
+
+- **Endpoint**: `POST /api/analysis`
+- **Headers**: `Content-Type: application/json`
+- **Minimal Request Body (JSON)**:
+
+```json
+{
+  "tickers": "TSLA,NVDA",
+  "enableRoundTable": true,
+  "roundTableRounds": 2
+}
+```
+
+- **Full Request Body Example (JSON)**:
+
+```json
+{
+  "tickers": "TSLA,NVDA",
+  "selectedAnalysts": [
+    "warren_buffett",
+    "cathie_wood",
+    "michael_burry",
+    "wsb",
+    "technical_analyst"
+  ],
+  "enableRoundTable": true,
+  "roundTableRounds": 2,
+  "initialCash": 100000,
+  "startDate": "2024-09-01",
+  "endDate": "2024-12-01"
+}
+```
+
+#### Request Parameters:
+
+| Parameter | Type | Required | Default | Description |
+|:---|:---|:---:|:---|:---|
+| `tickers` | string / array | ✅ | - | Tickers or company names across US, HK, TW (e.g. `"TSLA,NVDA"`, `"2330"`, `"3293"`, `"700"`, `"9988"`, `"騰訊"`, `"蘋果"`, `"SPCX"`) |
+| `selectedAnalysts` | array | ❌ | `[]` (all 16) | Analyst registry keys; unknown keys or non-array values return HTTP 400 |
+| `modelName` | string | ❌ | `openai/gpt-oss-20b` | Model identifier: `clef-flash`, `clef-flash-q4`, `openai/gpt-oss-20b`, `models/gemini-flash-latest`, `gpt-4o` |
+| `modelProvider` | string | ❌ | `Groq` | Model provider: `TypeSafe`, `Groq`, `Gemini`, `OpenAI` (`clef-flash` automatically maps to `TypeSafe`) |
+| `enableRoundTable` | boolean | ❌ | `false` | Enable multi-round debate committee after analyst signals |
+| `roundTableRounds` | integer | ❌ | `2` | Number of debate rounds (1 to 3) |
+| `initialCash` | number | ❌ | `100000` | Optional starting cash (min 100.0, default 100,000.0, supports aliases: `initial_cash`, `initialCapital`, `capital`, `cash`). Rejects negative, zero, or < 100.0 values with HTTP 400. Directly controls risk manager position limits and recommended shares |
+| `portfolio` | object | ❌ | — | Optional dated holdings and cash; its `cash` takes precedence over `initialCash` |
+| `pointInTime` | boolean | ❌ | `false` | Enable strict historical cutoff filtering and return source coverage/exclusions |
+| `startDate` | string | ❌ | 3 months ago | Historical start date (`YYYY-MM-DD`) |
+| `endDate` | string | ❌ | Today | Analysis end date (`YYYY-MM-DD`) |
+
+`portfolio` requires `as_of` (`YYYY-MM-DD`), non-negative `cash`, `currency` (ISO 4217), and `positions` (array; empty means flat). Each position requires `ticker`, signed `quantity` (positive long, negative short), non-negative `average_entry_price`, and trading `currency`. A snapshot must not be after `endDate` or more than 7 calendar days old. Cross-currency positions use a historical Yahoo Finance FX close no later than `as_of`; the request is rejected when no suitable rate is available. Omit `portfolio` to preserve legacy `initialCash` behavior.
+
+Strict point-in-time mode uses verified publication/availability time, not report period or event date. News without a publication timestamp and financial data without filing-level availability metadata are excluded with source-specific reasons. The SEC EDGAR adapter uses filing acceptance time plus a conservative dissemination buffer for eligible US issuers and requires `SEC_USER_AGENT`; this filing metadata does not make Yahoo financial values point-in-time verified. Current-only security registries are reported as survivorship-biased. Daily price inputs use unadjusted OHLC; future splits are reversed, and dividend cash flows are not modeled in this analysis endpoint.
+
+#### Resumable backtest grid
+
+- `POST /api/backtest/grid`: accepts `runId`, `tickers`, `startDate`, `endDate`; optional `portfolio`, `initialCash`, `cutoffTimeUtc` (shared UTC cutoff), `selectedAnalysts` (array of keys from the analyst registry; unknown keys and non-array values return HTTP 400), `dailyRebalancePolicy` (`daily` or `none`), `transactionFeeRate` (default `0.001`), and `slippageRate` (default `0.0005`).
+- `GET /api/backtest/runs/<run_id>`: reads the persisted manifest and result.
+- Reusing a `runId` resumes the original immutable data snapshots only when the configuration fingerprint matches. SQLite defaults to `instance/backtest_runs.sqlite3`; Docker Compose mounts `./instance` to `/app/instance` and sets `BACKTEST_RUN_DB=/app/instance/backtest_runs.sqlite3` so checkpoints survive container replacement.
+- Grid results disclose source coverage, excluded unknown timestamps, benchmark mapping/version, fees, slippage, current-universe survivorship bias, and that dividends are not modeled.
+
+Example: `{"runId":"trial-1","tickers":["AAPL","2330.TW"],"startDate":"2026-01-05","endDate":"2026-01-30","cutoffTimeUtc":"23:59:59Z","selectedAnalysts":["technical_analyst"],"initialCash":100000}`
+
+#### Response Format (JSON):
+```json
+{
+  "decisions": {
+    "TSLA": {
+      "action": "buy | sell | short | hold",
+      "quantity": 50,
+      "confidence": 85.0,
+      "reasoning": "Detailed committee execution rationale..."
+    }
+  },
+  "analyst_signals": {
+    "warren_buffett_agent": {
+      "TSLA": {
+        "signal": "bearish",
+        "confidence": 90.0,
+        "reasoning": "DCF valuation indicates -80% margin of safety..."
+      }
+    }
+  },
+  "round_table": {
+    "TSLA": {
+      "signal": "bearish",
+      "confidence": 65.0,
+      "discussion_summary": "Warren Buffett and Michael Burry clashed with Cathie Wood on valuation vs innovation...",
+      "consensus_view": "Valuation and debt risks outweigh short-term growth prospects.",
+      "dissenting_opinions": "Cathie Wood argued for exponential AI/robotics S-curve adoption.",
+      "conversation_transcript": "[Warren Buffett]: Intrinsic value doesn't hold up...\n[Cathie Wood]: Look at the innovation engine..."
+    }
+  }
+}
+```
+
+---
+
+### 2. ⚡ Asynchronous Stock Analysis (`POST /api/analysis/async`) & Task Polling (`GET /api/task/<task_id>`)
+Submit an equity analysis task in the background to avoid HTTP gateway timeouts (recommended for full 16-analyst evaluations or multi-ticker batches).
+
+- **Submit Task**: `POST /api/analysis/async` (Accepts identical payload as `/api/analysis`)
+- **Response (HTTP 202 Accepted)**:
+```json
+{
+  "taskId": "c7a840e6-8575-408f-8898-dbe3234d7d0a",
+  "status": "pending",
+  "message": "AI 分析任務已在背景建立，請透過 /api/task/<taskId> 查詢進度與結果",
+  "pollUrl": "/api/task/c7a840e6-8575-408f-8898-dbe3234d7d0a",
+  "tickers": ["2330.TW"]
+}
+```
+- **Poll Status & Result**: `GET /api/task/<task_id>` (also `/api/analysis/status/<task_id>`)
+  - Status lifecycle: `pending` ➔ `running` ➔ `completed` (or `error`).
+  - Upon `completed`, returns the complete `analyst_signals`, `risk_management_agent`, and `decisions`.
+
+---
+
+### 3. 🔍 Smart Stock Resolver & Registry (`GET /api/stock/resolve`)
+Resolve company names or regional ticker codes into standardized symbols (Taiwan `.TW`, Hong Kong `.HK`, US SPCX, China A-shares) and retrieve official profiles:
+- **Endpoint**: `GET /api/stock/resolve?q=2330` or `POST /api/stock/resolve` with `{"tickers": ["2330", "TSLA", "SPCX", "騰訊"]}`
+- **Global Registry Status**: `GET /api/stock/registry/status` (32,000+ listings cached with SWR updates)
+
+---
+
+### 4. 🏛️ Standalone Round Table Debate (`POST /api/round_table`)
+Run an investment committee debate with pre-computed analyst signals.
+
+- **Endpoint**: `POST /api/round_table`
+- **Headers**: `Content-Type: application/json`
+- **Request Body (JSON)**:
+
+```json
+{
+  "tickers": "NVDA",
+  "analystSignals": {
+    "cathie_wood": {
+      "NVDA": {"signal": "bullish", "confidence": 90, "reasoning": "Exponential AI infrastructure demand"}
+    },
+    "michael_burry": {
+      "NVDA": {"signal": "bearish", "confidence": 75, "reasoning": "Hyperscaler capex peak and concentration risk"}
+    }
+  },
+  "numRounds": 2
+}
+```
+
+#### Response Format (JSON):
+```json
+{
+  "round_table": {
+    "NVDA": {
+      "signal": "neutral",
+      "confidence": 65.0,
+      "discussion_summary": "Cathie Wood debated Michael Burry on AI capex sustainability...",
+      "consensus_view": "Strong long-term positioning balanced against near-term concentration risk.",
+      "dissenting_opinions": "Michael Burry warned of margin compression if hyperscaler spending cools.",
+      "conversation_transcript": "[Cathie Wood]: AI transformation is just beginning...\n[Michael Burry]: Don't ignore the customer concentration risk..."
+    }
+  }
+}
+```
+
+---
+
+### 5. 💓 Health Check (`GET /api/health`)
+- **Endpoint**: `GET /api/health`
+- **Response**: `{"status": "healthy", "version": "2.0.0", "timestamp": "2026-08-26T07:35:04Z"}`
+
+---
+
+## 👥 16 Analyst Personas Reference Table
+
+| Analyst Key | Display Name | Core Investment Philosophy |
+|:---|:---|:---|
+| `warren_buffett` | **Warren Buffett** | Moats, predictable cash flow, ROE > 15%, 30% margin of safety |
+| `charlie_munger` | **Charlie Munger** | Inversion mental model, pricing power, management integrity |
+| `ben_graham` | **Ben Graham** | Margin of safety, Net-Net (NCAV), conservative P/E & P/B |
+| `cathie_wood` | **Cathie Wood** | Disruptive innovation, 5-year S-curves, AI / robotics CAGR > 25% |
+| `bill_ackman` | **Bill Ackman** | Activist value investing, high barrier to entry, operational catalysts |
+| `nancy_pelosi` | **Nancy Pelosi** | Congressional trading disclosures, legislative and subsidy tailwinds |
+| `michael_burry` | **Michael Burry** | Deep value contrarian, FCF yield > 8%, hidden debt & accounting risks |
+| `peter_lynch` | **Peter Lynch** | Consumer insight, PEG ratio < 1.0, 10-bagger growth potential |
+| `phil_fisher` | **Phil Fisher** | 15 qualitative points, R&D productivity, outstanding sales execution |
+| `wsb` | **WallStreetBets** | Retail momentum, short squeeze, YOLO options, 2md Reddit hype |
+| `technical_analyst` | **Technical Analyst** | Trend following, SMA 20/50/200, RSI, MACD, Bollinger Bands |
+| `fundamentals_analyst` | **Fundamentals Analyst** | Financial statements audit, revenue growth, gross & net margins |
+| `sentiment_analyst` | **Sentiment Analyst** | 2md global news sentiment scoring, SEC Form 4 insider trades |
+| `valuation_analyst` | **Valuation Analyst** | Discounted Cash Flow (DCF), EV/EBITDA, relative peer multiples |
+| `stanley_druckenmiller` | **Stanley Druckenmiller** | Macro & growth inflections, acceleration rate-of-change, asymmetric risk/reward |
+| `decision_model` | **Jev Decision Model** | JEV SystemOne fast structured evaluation, T+1~T+3 directional probability forecasting, PEAD drift |
+
+---
+
+## 💡 Agent Usage Tips
+
+1. **For General Stock Analysis**:
+   - Send `POST /api/analysis` with `enableRoundTable: true` to get both individual analyst metrics and a synthesized committee decision.
+2. **For High-Growth / Tech Stocks**:
+   - Select `["cathie_wood", "michael_burry", "wsb", "valuation_analyst"]` to get balanced bull/bear debate on growth vs valuation.
+3. **For Value / Defensive Stocks**:
+   - Select `["warren_buffett", "ben_graham", "charlie_munger", "fundamentals_analyst"]`.
+4. **For Non-US Stocks** (e.g. Taiwan `2330.TW`, Hong Kong `0001.HK`):
+   - The system automatically normalizes ticker suffixes and leverages 2md search for global news and sentiment.
+5. **Bilingual Support (English & Traditional Chinese / 雙語輸出)**:
+   - All `reasoning`, `discussion_summary`, `consensus_view`, `dissenting_opinions`, and `conversation_transcript` automatically provide comprehensive bilingual explanations in English and Traditional Chinese (【繁體中文解析】).
+
+---
+
+## 🔌 Model Context Protocol (MCP) Server Integration
+
+This repository ships with a built-in standard **MCP Server** ([`mcp_server.py`](file:///Users/david/git/tbdavid2019/ai-hedge-fund-API/mcp_server.py)) compatible with **Cursor**, **Claude Desktop**, **Windsurf**, and **Antigravity**.
+
+### Available MCP Tools:
+1. `analyze_stock_with_committee`: Run full 16-persona hedge fund analysis and round table debate.
+2. `get_stock_quant_audit`: Instant quantitative audit returning 95%/99% VaR, CVaR, Realized Volatility Regimes, 5×5 DCF Sensitivity Matrix, Altman Z-Score (bankruptcy risk), Piotroski F-Score (0-9 financial health), Amihud Illiquidity Ratio, and ATR Dynamic Trailing Stops.
+
+### Claude Desktop / Cursor Configuration:
+```json
+{
+  "mcpServers": {
+    "ai-hedge-fund": {
+      "command": "python3",
+      "args": ["/absolute/path/to/ai-hedge-fund-API/mcp_server.py"],
+      "env": {
+        "GROQ_API_KEY": "your_groq_key_here"
+      }
+    }
+  }
+}
+```
+
+---
+
+## 🛡️ JSON Compliance & Strict Parsing Guarantees (RFC 8259)
+
+- **Zero `NaN` / `Infinity` Guarantee**: All numerical metrics across all 16 analysts (e.g. `momentum_6m`, `historical_volatility`, `volatility_z_score`, `z_score`, `atr_ratio`, `dcf_value`, etc.) are strictly sanitized to standard JSON floats or `null`.
+- **Node.js & TypeScript 100% Safe**: Never triggers `SyntaxError: Unexpected token 'N' (NaN is not valid JSON)` when executing `JSON.parse()` in Node.js, Next.js API routes (`route.ts`), Python, Go, or browser clients.
+- **Graceful Insufficient Data Handling**: When historical price days are shorter than rolling indicator windows (e.g. calculating 6-month momentum on a 3-month timeframe), indicators automatically use `min_periods=1` and fallback to valid numbers or `null`.
+
+
+## Headline Arena committee forecast (synchronous analysis only)
+
+`POST /api/analysis` optionally accepts `forecastChallenge` (the complete Arena daily
+challenge object) and `marketContext` (fresh `/api/v1/eval/challenges/{id}/context` response).
+These inputs are supplied by `scripts/sync_headline_arena.py`; the backend does not submit to Arena.
+Legacy stock analysis requests remain unchanged. Async forecast requests are rejected.
+
+Requirements:
+- One ticker: ES uses `SPY`, GC uses `GLD`; other assets are outside this pilot.
+- `selectedAnalysts` must be `["technical_analyst", "sentiment_analyst"]`, with
+  `enableRoundTable=true`. Do not use the unsupported `analysts` parameter.
+- The challenge must include `id`, `asset`, `challenge_type`, `question`, `status`,
+  `deadline`, `resolve_at`, `open_price`, `open_price_confirmed`, `baseline_status`,
+  `contract_symbol`, `dead_zone_pct`, and `resolution_criteria`. Baseline must be confirmed.
+- Explicit `prediction_schema` is checked for the three bearish/neutral/bullish outcomes;
+  absent schema is accepted only for the documented legacy daily direction contract.
+- Context must be challenge-bound and prediction-ready, with matching contract/baseline,
+  an undelayed quote and an observation timestamp no older than 15 minutes. A refreshed
+  response timestamp alone does not establish quote freshness.
+
+The response adds `forecast`: `challenge_id`, full `probabilities`, bilingual `reasoning`,
+`prompt_hash`, `prompt_version`, `model_attribution`, `selectedAnalysts`, and `evidence`.
+Sentiment signals also expose `data_coverage.news_count` / `insider_count`; zero-news
+sentiment defaults are rejected for this pilot. The evidence contains normalized analyst
+confidence, actual `round_table[ticker]`, proxy
+limitations, context and challenge rules. Portfolio actions are references only. Primary
+and fallback synthesis failures return HTTP 503; no neutral/default forecast is returned.
+Actual synthesis model attribution reflects failover and does not describe every upstream
+analyst call. Model text is never trusted to self-report the provider used.
+
+CLI: run `--status`, then `--dry-run`, then `--submit` after human claim. Submission is
+committee-only and requires a live token confirming `agent_status=active` and
+`claim_pending=false`. Existing provisional agents must be claimed, not registered again.
+CLI configuration: `HEDGE_FUND_URL`, `HA_BASE_URL`, `HA_HOME`, `HA_AGENT_ID`,
+`HA_CLIENT_SECRET`; existing private credential files remain supported. Do not expose
+claim links, pairing codes or secrets. The SQLite journal defaults to
+`HA_HOME/forecast_runs.sqlite3` (`--journal` overrides); persist and share it per agent.
+
+Only `counts_for_score=true` on a successful submission is treated as scoring-eligible;
+false means paper-only and missing means unconfirmed. Pending or ambiguous attempts are
+not automatically retried. Confirmed-unsent requests and explicit 4xx rejections release
+reservations for a later run; 408 remains ambiguous and 409 remains blocked for remote
+prediction reconciliation. Evaluation reports failed reads and filters by the selected agent. `--evaluate` compares eligible resolved predictions with saved
+uniform, always-neutral and momentum baselines using raw three-class Brier. This differs
+from the platform's confidence-weighted directional leaderboard score. Predictive skill,
+account claim and production coverage require operational validation; none is implied by
+successful offline tests.

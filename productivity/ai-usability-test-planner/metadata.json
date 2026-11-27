@@ -1,0 +1,38 @@
+{
+  "name": "ai-usability-test-planner",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/ai-ux-design/ai-usability-test-planner/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "ai-usability-test-planner",
+  "downloaded_at": "2026-11-27T07:39:53.402391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/ai-usability-test-planner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/ai-usability-test-planner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plans usability studies for non-deterministic Artificial Intelligence (AI) features, choosing between Wizard-of-Oz, seeded-output, and live-model methods, and produces task scripts, variance-aware success metrics, trust-calibration measures, and a plan for pairing findings with offline evaluations. Use when usability testing a chatbot, copilot, or agent; outputs differ between participants and results are hard to compare; measuring whether users over-trust or under-trust AI; or deciding what to test before the model is ready."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "codex",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/codex/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "codex-xiaolinbenben-food4agent",
+  "downloaded_at": "2026-11-27T08:00:08.063884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/codex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/codex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate coding to OpenAI Codex CLI (features, PRs)."
+}

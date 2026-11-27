@@ -1,0 +1,38 @@
+{
+  "name": "harness-engineering",
+  "repo": "wxxb789/hoa",
+  "path": "skills/engineering/harness-engineering/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "harness-engineering",
+  "downloaded_at": "2026-11-27T07:57:42.731850Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/engineering/harness-engineering/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/engineering/harness-engineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refactor a repo's watchdogs, drift checkers or cron scripts into self-contained modules and a thin runner. When maintenance scripts sprawl or checks multiply, consolidate duplicate machinery and tie each check to an owner decision. Not for agent-harness-settings-parity."
+}

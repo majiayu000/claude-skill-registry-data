@@ -1,0 +1,37 @@
+{
+  "name": "session-check",
+  "repo": "twidxuga/dotfiles",
+  "path": "claude/dot-claude/skills/session-check/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/twidxuga/dotfiles",
+  "dir_name": "session-check",
+  "downloaded_at": "2026-11-27T07:34:39.582506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "twidxuga",
+  "source_url": "https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/session-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/session-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check your mailbox for incoming messages from other Claude Code sessions. Poll for inter-session communication."
+}

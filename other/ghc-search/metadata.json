@@ -1,0 +1,38 @@
+{
+  "name": "ghc-search",
+  "repo": "wxxb789/hoa",
+  "path": "skills/research-writing/ghc-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "ghc-search",
+  "downloaded_at": "2026-11-27T07:57:41.869501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/research-writing/ghc-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/research-writing/ghc-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find a public announcement, current fact or original X/Twitter posts through ghc-proxy web and social search. When you don't have a URL, choose the web or X engine, filter by domain, handle or date as supported, and return an answer with deduplicated source URLs. Not for official-document-verification."
+}

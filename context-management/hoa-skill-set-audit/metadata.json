@@ -1,0 +1,38 @@
+{
+  "name": "hoa-skill-set-audit",
+  "repo": "wxxb789/hoa",
+  "path": "skills/skill-authoring/hoa-skill-set-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "hoa-skill-set-audit",
+  "downloaded_at": "2026-11-27T07:57:43.901299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/skill-authoring/hoa-skill-set-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/skill-authoring/hoa-skill-set-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to audit, prune or consolidate the whole set of skills a session is offered, across plugin, hub, project and repo sources. Finds overlapping or contradictory skills, shadowing, same-name drift, visibility mistakes, broken ../ closure and listing-budget truncation, ranks fixes and gives necessity verdicts. Not for reviewing one skill (hoa-skill-review), provenance or upstream freshness (hoa-skill-curate), reviewing one repo's practices (the explicit hoa-repo-reckoning shortcut), or editing skills."
+}

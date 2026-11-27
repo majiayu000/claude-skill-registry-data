@@ -1,0 +1,42 @@
+{
+  "name": "office",
+  "repo": "xiaolinbenben/food4agent",
+  "path": "skills/office/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/xiaolinbenben/food4agent",
+  "dir_name": "office-xiaolinbenben-food4agent",
+  "downloaded_at": "2026-11-27T08:00:09.118488Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, word, excel, pptx, xlsx, docx",
+    "score": 6,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word",
+      "excel",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xiaolinbenben",
+  "source_url": "https://github.com/xiaolinbenben/food4agent/blob/main/skills/office/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xiaolinbenben/food4agent/blob/main/skills/office/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "办公产物的审美与风格指导。当需要制作或美化 PPT/PPTX/演示文稿/deck/slides、Word/DOCX/文档/报告、Excel/XLSX/表格/数据表、PDF/长文档、海报/汇报材料/白皮书/方案书时使用。提供设计哲学、配色风格库、版式元素与各产物审美侧重，让产出摆脱\"AI 默认风\"，达到可交付客户的视觉水准。",
+  "content_fingerprint": "5b71a4aec10a8e114631a399143409f019ef4f554f234293a10164d049aa5bdd"
+}

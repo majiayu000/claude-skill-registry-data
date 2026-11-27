@@ -1,0 +1,37 @@
+{
+  "name": "lagune-plan",
+  "repo": "wellwelwel/weslley.io",
+  "path": ".claude/skills/lagune-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wellwelwel/weslley.io",
+  "dir_name": "lagune-plan-wellwelwel-weslley-io",
+  "downloaded_at": "2026-11-27T07:49:34.906522Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/weslley.io/blob/main/.claude/skills/lagune-plan/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/weslley.io/blob/main/.claude/skills/lagune-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn what detect found into the defense plan, one fix per finding, each rated by CVSS v4.0 (category, CVSS, priority) and tied to a charter principle. Reads the detect map and the charter, then plans every finding, named paths, or a concern you describe."
+}

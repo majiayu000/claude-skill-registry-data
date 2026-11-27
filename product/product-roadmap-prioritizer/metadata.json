@@ -1,0 +1,39 @@
+{
+  "name": "product-roadmap-prioritizer",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/product-management/product-roadmap-prioritizer/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "product-roadmap-prioritizer",
+  "downloaded_at": "2026-11-27T07:39:56.105685Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature, backlog",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/product-management/product-roadmap-prioritizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/product-management/product-roadmap-prioritizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs candidate features through Reach-Impact-Confidence-Effort (RICE), Kano, Must-Should-Could-Won't (MoSCoW), and Cost-of-Delay scoring, surfaces convergence and divergence across frameworks, and produces a defensible quarterly priority list with explicit trade-offs. Use when building a quarterly or annual roadmap; resolving conflicting stakeholder input; justifying a deprioritization to a stakeholder; or normalizing requests from multiple sources (sales, customer success, leadership) into one queue."
+}

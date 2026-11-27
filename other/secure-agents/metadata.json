@@ -1,0 +1,38 @@
+{
+  "name": "secure-agents",
+  "repo": "tinkerbench-studio/tick-it-claude-mod",
+  "path": "skills/secure-agents/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tinkerbench-studio/tick-it-claude-mod",
+  "dir_name": "secure-agents",
+  "downloaded_at": "2026-11-27T07:27:18.462936Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "language-model",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tinkerbench-studio",
+  "source_url": "https://github.com/tinkerbench-studio/tick-it-claude-mod/blob/main/skills/secure-agents/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tinkerbench-studio/tick-it-claude-mod/blob/main/skills/secure-agents/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Secure-coding practices for software with a language model in the loop, covering prompts built from outside text, prompt injection, tools and MCP servers, agent permissions and hooks, subagents, and what a model's output is allowed to do. Use before writing or changing a prompt, a tool, an agent, a hook, a skill or code that acts on a model's answer, and when reviewing such a change.",
+  "content_fingerprint": "d745c606be63e7c064565f29b19de853ab9c06a0e0f570eeb984c344152c9003"
+}

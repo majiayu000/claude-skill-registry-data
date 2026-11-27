@@ -1,0 +1,37 @@
+{
+  "name": "land-pr",
+  "repo": "tobihagemann/turbo",
+  "path": "codex/skills/land-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tobihagemann/turbo",
+  "dir_name": "land-pr-tobihagemann-turbo",
+  "downloaded_at": "2026-11-27T07:28:49.776064Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tobihagemann",
+  "source_url": "https://github.com/tobihagemann/turbo/blob/main/codex/skills/land-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tobihagemann/turbo/blob/main/codex/skills/land-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Follow a PR to merge: wait for AI reviewers and checks, resolve their feedback, then offer to merge and clean up. Use when the user asks to \"land the PR\", \"follow up on the PR\", or \"merge when ready\"."
+}

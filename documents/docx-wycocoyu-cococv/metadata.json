@@ -1,0 +1,41 @@
+{
+  "name": "docx",
+  "repo": "wycocoyu/cococv",
+  "path": "backend/agent/skills/office-files/docx/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wycocoyu/cococv",
+  "dir_name": "docx-wycocoyu-cococv",
+  "downloaded_at": "2026-11-27T07:57:50.825601Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, word, excel, docx, markdown",
+    "score": 5,
+    "runner_up": "business",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "word",
+      "excel",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wycocoyu",
+  "source_url": "https://github.com/wycocoyu/cococv/blob/main/backend/agent/skills/office-files/docx/SKILL.md",
+  "license": "Proprietary. LICENSE.txt has complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wycocoyu/cococv/blob/main/backend/agent/skills/office-files/docx/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction.",
+  "content_fingerprint": "315c22188293bc275b47591a4bf2ccbe069cae91cdb76e423a13e0efbb92d9fa"
+}

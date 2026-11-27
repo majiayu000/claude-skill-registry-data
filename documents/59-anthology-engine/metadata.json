@@ -1,0 +1,39 @@
+{
+  "name": "anthology-engine",
+  "repo": "trevorotts1/openclaw-onboarding",
+  "path": "59-anthology-engine/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/trevorotts1/openclaw-onboarding",
+  "dir_name": "59-anthology-engine",
+  "downloaded_at": "2026-11-27T07:32:32.718915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, word",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trevorotts1",
+  "source_url": "https://github.com/trevorotts1/openclaw-onboarding/blob/main/59-anthology-engine/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trevorotts1/openclaw-onboarding/blob/main/59-anthology-engine/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The Anthology Engine, the per-client orchestrator that turns ONE participant's universal Convert and Flow form submission into ONE gated, quality-controlled 2,000 to 3,500 word anthology chapter (never twelve), delivered as BOTH a Google Doc and a designed PDF with no font below 14 point, links pushed to standardized Convert and Flow contact custom fields keyed by contact_id. It owns ALL external input and output and CALLS Skill 54 (Anthology Writer) as its authoring core; it never re-authors the chapter pipeline. Four layers: a deterministic intake router; an Airtable-backed durable multi-participant ledger (contact_id plus anthology_id); the Skill 54 authoring core extended with the Skill 52 avatar handoff and the newly pinned prompts; Google Drive plus PDF plus Convert and Flow delivery; and the producer and participant surfaces INSIDE the client's own Command Center (a seeded Anthology department board, home-screen tiles, and a token-scoped participant page). Every stage is an idempotent, resumable job against the ledger; a crash, a credit outage, or a six-month pause costs nothing. Runs S0 intake to S9 anthology assembly through one sanctioned entry (anthology-engine-entry.sh). The producer is the OpenClaw box owner; participants are external co-authors with no login. Runtime uses the client's own configured provider chain only. Move in silence: operator-verbose, client-silent, only three sanctioned nudge templates ever reach a client. Sibling of Skill 53 (Book Writer) and Skill 54 (Anthology Writer); it deprecates neither. Trigger with \"run the anthology engine\", \"start an anthology\", \"onboard an anthology producer\", \"assemble the anthology\", or an inbound anthology intake webhook.",
+  "content_fingerprint": "1b4441d5a95afde61bc1044aee96a875e85808b4835312d6dce4cc87378faeb0"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "uncertainty-and-explainability-patterns",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/ai-ux-design/uncertainty-and-explainability-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "uncertainty-and-explainability-patterns",
+  "downloaded_at": "2026-11-27T07:39:53.880916Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/uncertainty-and-explainability-patterns/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/uncertainty-and-explainability-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Selects how an Artificial Intelligence (AI) feature should communicate confidence, citations, sources, and reasoning for a specific audience and risk level, producing a pattern specification with display rules, thresholds, and an anti-pattern check covering false precision, explanation theater, and citation laundering. Use when deciding whether to show confidence scores; designing citations for a Retrieval-Augmented Generation (RAG) answer; explaining why a model made a recommendation; or users over-trust or ignore AI output."
+}

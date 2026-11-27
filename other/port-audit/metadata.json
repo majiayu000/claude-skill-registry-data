@@ -1,0 +1,37 @@
+{
+  "name": "port-audit",
+  "repo": "tusharsrivastava/shark-skills",
+  "path": "skills/port-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tusharsrivastava/shark-skills",
+  "dir_name": "port-audit",
+  "downloaded_at": "2026-11-27T07:34:23.594123Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tusharsrivastava",
+  "source_url": "https://github.com/tusharsrivastava/shark-skills/blob/main/skills/port-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tusharsrivastava/shark-skills/blob/main/skills/port-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds each rule that a refactor or a rebuild lost, by a static audit of the deleting commits against production. Use before a rewrite replaces production code, or when tests stay green but behaviour is lost."
+}

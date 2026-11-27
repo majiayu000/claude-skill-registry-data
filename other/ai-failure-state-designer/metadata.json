@@ -1,0 +1,38 @@
+{
+  "name": "ai-failure-state-designer",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/ai-ux-design/ai-failure-state-designer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "ai-failure-state-designer",
+  "downloaded_at": "2026-11-27T07:39:53.270730Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/ai-failure-state-designer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/ai-failure-state-designer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps an Artificial Intelligence (AI) feature's failure modes - hallucination, refusal, low confidence, latency, partial results, tool errors, and outdated knowledge - to detection signals, User Interface (UI) patterns, recovery actions, and ready-to-use microcopy. Use when designing error states for a chatbot, copilot, or agent; users hit dead ends after an AI failure; writing refusal or fallback copy; or preparing a failure-handling spec before launch."
+}

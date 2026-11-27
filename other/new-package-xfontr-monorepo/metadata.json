@@ -1,0 +1,39 @@
+{
+  "name": "new-package",
+  "repo": "xfontr/monorepo",
+  "path": ".claude/skills/new-package/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/xfontr/monorepo",
+  "dir_name": "new-package-xfontr-monorepo",
+  "downloaded_at": "2026-11-27T07:58:49.366428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, devops=4",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xfontr",
+  "source_url": "https://github.com/xfontr/monorepo/blob/master/.claude/skills/new-package/SKILL.md",
+  "license": "ISC",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xfontr/monorepo/blob/master/.claude/skills/new-package/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffold a new project in this monorepo under packages/, apps/ or infrastructure/ \u2014 package.json with Nx tags and an exports map, the three wrapper configs, a README, and the boundary wiring. Use when adding a new workspace project, a new shared package, a new app, or a new infrastructure service."
+}

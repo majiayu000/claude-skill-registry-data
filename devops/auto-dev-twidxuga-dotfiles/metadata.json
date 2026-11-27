@@ -1,0 +1,38 @@
+{
+  "name": "auto-dev",
+  "repo": "twidxuga/dotfiles",
+  "path": "claude/dot-claude/skills/auto-dev/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/twidxuga/dotfiles",
+  "dir_name": "auto-dev-twidxuga-dotfiles",
+  "downloaded_at": "2026-11-27T07:34:38.916874Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "twidxuga",
+  "source_url": "https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/auto-dev/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/twidxuga/dotfiles/blob/main/claude/dot-claude/skills/auto-dev/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous PR development methodology. Use ONLY when the user explicitly invokes /auto-dev or explicitly asks to load this skill \u2014 never auto-activate. Reviews every PR twice, monitors all CI pipelines in background, replies to and resolves every review comment from any reviewer (automated systems like CodeRabbit and human reviewers alike), merges PRs (apps or infra) when green, then monitors post-merge and deployment pipelines, iterating on failures."
+}

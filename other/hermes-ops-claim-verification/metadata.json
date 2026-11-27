@@ -1,0 +1,37 @@
+{
+  "name": "hermes-ops-claim-verification",
+  "repo": "wxxb789/hoa",
+  "path": "skills/hermes/hermes-ops-claim-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wxxb789/hoa",
+  "dir_name": "hermes-ops-claim-verification",
+  "downloaded_at": "2026-11-27T07:57:44.103506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wxxb789",
+  "source_url": "https://github.com/wxxb789/hoa/blob/main/skills/hermes/hermes-ops-claim-verification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wxxb789/hoa/blob/main/skills/hermes/hermes-ops-claim-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether a Hermes cron job really ran, a fix actually landed or a CI or review-bot verdict applies. When a maintenance check is green after manual reruns, find timestamped scheduler output or deployment receipts and recheck the auditor's verdict. Not for report-claim-audit."
+}

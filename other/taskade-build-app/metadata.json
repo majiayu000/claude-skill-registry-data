@@ -1,0 +1,37 @@
+{
+  "name": "taskade-build-app",
+  "repo": "taskade/mcp",
+  "path": "skills/taskade-build-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade-build-app",
+  "downloaded_at": "2026-11-27T07:17:45.346198Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/skills/taskade-build-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/skills/taskade-build-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan a new Taskade Genesis app from a business goal, write a build request for Taskade EVE that makes the app safe and useful at its first publish, give a link that fills in the request, then check the finished build against the plan. Use when the user says \"build me an app\", \"I need a client portal\", \"a CRM\", \"a booking system\", \"a dashboard\", \"turn my process into an app\", \"plan a Taskade app\", or describes a business process to run in Taskade. Next jobs are taskade-spreadsheet-to-app to bring in the real rows, taskade-check-app and taskade-secure-app after the build, taskade-publish-app for the first publish."
+}

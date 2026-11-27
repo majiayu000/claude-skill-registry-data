@@ -1,0 +1,37 @@
+{
+  "name": "tidy",
+  "repo": "zackcpetersen/claude-setup",
+  "path": "skills/tidy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zackcpetersen/claude-setup",
+  "dir_name": "tidy-zackcpetersen-claude-setup",
+  "downloaded_at": "2026-11-27T08:12:27.645643Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zackcpetersen",
+  "source_url": "https://github.com/zackcpetersen/claude-setup/blob/main/skills/tidy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zackcpetersen/claude-setup/blob/main/skills/tidy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to clean up, tidy, prune or archive leftovers (branches, worktrees, agents, plans, handoffs, stale board lines), at board wrap or rollover, or for the weekly deep clean."
+}

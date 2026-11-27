@@ -1,0 +1,36 @@
+{
+  "name": "release-safety",
+  "repo": "tamagui/tamagui",
+  "path": ".claude/skills/release-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tamagui/tamagui",
+  "dir_name": "release-safety",
+  "downloaded_at": "2026-11-27T07:15:44.652278Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tamagui",
+  "source_url": "https://github.com/tamagui/tamagui/blob/main/.claude/skills/release-safety/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tamagui/tamagui/blob/main/.claude/skills/release-safety/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Release safety rules. INVOKE WHEN: yarn release, npm publish, release canary, release packages, publishing, skip checks, skip tests. NEVER skip checks or tests without explicit permission."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ai-ux-audit",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/ai-ux-design/ai-ux-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "ai-ux-audit",
+  "downloaded_at": "2026-11-27T07:39:53.512356Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, language-model",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "language-model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/ai-ux-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-ux-design/ai-ux-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a scored heuristic audit of an Artificial Intelligence (AI) feature across six AI-specific dimensions - transparency, control, feedback, error recovery, expectation-setting, and trust calibration - and produces a severity-ranked fix list with owners. Use when reviewing an AI feature before launch; diagnosing low adoption or high abandonment of a copilot or agent; benchmarking an AI experience against competitors; or preparing a design review for a Large Language Model (LLM) feature."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ai-feature-experiment-designer",
+  "repo": "varunk130/claude-code-skills",
+  "path": "skills/ai-marketing-growth/ai-feature-experiment-designer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/varunk130/claude-code-skills",
+  "dir_name": "ai-feature-experiment-designer",
+  "downloaded_at": "2026-11-27T07:39:52.460048Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=4, productivity=4",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 4,
+    "signals": [
+      "ai",
+      "llm",
+      "language-model",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varunk130",
+  "source_url": "https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-marketing-growth/ai-feature-experiment-designer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varunk130/claude-code-skills/blob/main/skills/ai-marketing-growth/ai-feature-experiment-designer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs A/B tests for non-deterministic Artificial Intelligence (AI) features: an offline-evaluation gate, variance-aware sample sizing, a primary metric with guardrails for cost per task, latency, and override rate, novelty-effect handling, and pre-registered ship / iterate / kill decision rules. Use when testing a new model, prompt, or agent behavior in production; comparing two Large Language Model (LLM) providers or versions; deciding whether an AI feature actually moves a business metric; or an online test result contradicts offline evaluations."
+}

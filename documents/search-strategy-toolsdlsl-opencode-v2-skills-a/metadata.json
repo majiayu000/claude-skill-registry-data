@@ -1,0 +1,39 @@
+{
+  "name": "search-strategy",
+  "repo": "toolsdlsl/Opencode-V2-Skills-Agents",
+  "path": "skills/search-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/toolsdlsl/Opencode-V2-Skills-Agents",
+  "dir_name": "search-strategy-toolsdlsl-opencode-v2-skills-a",
+  "downloaded_at": "2026-11-27T07:30:47.423478Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "toolsdlsl",
+  "source_url": "https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/search-strategy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/toolsdlsl/Opencode-V2-Skills-Agents/blob/main/skills/search-strategy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Query decomposition and multi-source search orchestration. Breaks natural language questions into targeted searches per source, translates queries into source-specific syntax, ranks results by relevance, and handles ambiguity and fallback strategies.",
+  "content_fingerprint": "74c8bf6a973a894983568552589ece230365b84f5e6e443f59117d9f8d2eb64e"
+}

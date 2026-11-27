@@ -1,0 +1,38 @@
+{
+  "name": "taskade",
+  "repo": "taskade/mcp",
+  "path": "skills/taskade/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/taskade/mcp",
+  "dir_name": "taskade",
+  "downloaded_at": "2026-11-27T07:17:44.602622Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "taskade",
+  "source_url": "https://github.com/taskade/mcp/blob/main/skills/taskade/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/taskade/mcp/blob/main/skills/taskade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Connect your AI agent to Taskade and run your workspace from the chat (projects, tasks, fields, AI agents, automations and Taskade Genesis app files) through the hosted Taskade MCP server. Use when the user mentions Taskade or a Taskade Genesis app, says \"set up Taskade\", \"connect Taskade\", \"what can you do in Taskade\", \"what is in my workspace\", \"add a task\", \"add a column\", \"show this as a board\", \"why is my calendar empty\", or when a Taskade tool fails with a sign-in or plan error. For one job, use the skill of that job instead. The job skills are taskade-build-app (a new app), taskade-check-app (a health check), taskade-fix-app (a fix), taskade-fix-first-screen (the first screen), taskade-secure-app (who can sign in), taskade-fix-flows (automations), taskade-clone-kit (copy a kit), taskade-spreadsheet-to-app (rows), taskade-publish-app (a release), taskade-report (a report), taskade-build-agent (an AI agent), taskade-repo-to-project (the plan of a code repository) and taskade-markdown (a file)."
+}

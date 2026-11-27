@@ -1,0 +1,37 @@
+{
+  "name": "session-nudge",
+  "repo": "zydo/skills",
+  "path": "skills/session-nudge/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zydo/skills",
+  "dir_name": "session-nudge-zydo-skills",
+  "downloaded_at": "2026-11-27T08:20:04.077444Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zydo",
+  "source_url": "https://github.com/zydo/skills/blob/main/skills/session-nudge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zydo/skills/blob/main/skills/session-nudge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a periodic or one-time keepalive nudge on or off for the current coding-agent session (Claude Code, Codex CLI or Grok Build), set its pace, or show whether it is on. The nudge is a \"[HH:MM:SS] Automated nudge: continue working ...\" message that a background OS job (launchd / systemd timer / cron / Windows Task Scheduler) types into opted-in agent terminals, every 61 minutes by default. Use for \"/session-nudge on|off|enable|disable|status\", \"nudge every 20 minutes\", \"nudge once at 2:01 AM\", \"turn the nudge off here\", \"\u522b\u7ed9\u8fd9\u4e2a session \u53d1 nudge\", \"\u6bcf\u534a\u5c0f\u65f6 nudge \u4e00\u6b21\", \"\u7ed9\u90a3\u4e2a codex \u7a97\u53e3\u5f00 nudge\", \"nudge my grok window too\", and when setting the nudge up or testing it on a new machine. Sessions are off by default."
+}

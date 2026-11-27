@@ -1,0 +1,37 @@
+{
+  "name": "audit-report",
+  "repo": "xfontr/monorepo",
+  "path": ".claude/skills/audit-report/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/xfontr/monorepo",
+  "dir_name": "audit-report-xfontr-monorepo",
+  "downloaded_at": "2026-11-27T07:58:47.995194Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xfontr",
+  "source_url": "https://github.com/xfontr/monorepo/blob/master/.claude/skills/audit-report/SKILL.md",
+  "license": "ISC",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xfontr/monorepo/blob/master/.claude/skills/audit-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Statically read one project or directory for bugs, duplication and weak code, and file the findings as a dated audit under docs/audits/ \u2014 then, on later turns, flip a finding's Status as it gets fixed. Use on \"audit X\", \"do a static analysis of X\", \"static review of X\", \"find the bugs in X\", \"what's wrong with X\", or \"fix B3 from the X audit\". Answering an architectural question is `decision-report`."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "argent-tv-interact",
+  "repo": "software-mansion/argent",
+  "path": "packages/skills/skills/argent-tv-interact/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/software-mansion/argent",
+  "dir_name": "argent-tv-interact-software-mansion-argent",
+  "downloaded_at": "2026-11-27T07:05:23.294492Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "software-mansion",
+  "source_url": "https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-tv-interact/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/software-mansion/argent/blob/main/packages/skills/skills/argent-tv-interact/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Control and inspect TV apps via argent, Apple TV (tvOS), Android TV (leanback), and Amazon Fire TV (Vega). Boot the target, read focus, navigate with the D-pad remote, type, screenshot, and on Vega debug the JS runtime (evaluate, console logs, network inspector). Use when a task targets a TV (runtimeKind \"tv\", or platform \"vega\"), or mentions Apple TV / tvOS / Android TV / leanback / Vega / Fire TV / VVD."
+}

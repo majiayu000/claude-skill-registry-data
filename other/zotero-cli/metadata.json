@@ -1,0 +1,38 @@
+{
+  "name": "zotero-cli",
+  "repo": "zrwangems/dsh-zrwang-plugin",
+  "path": "skills/research/zotero-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zrwangems/dsh-zrwang-plugin",
+  "dir_name": "zotero-cli",
+  "downloaded_at": "2026-11-27T08:19:06.784775Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zrwangems",
+  "source_url": "https://github.com/zrwangems/dsh-zrwang-plugin/blob/main/skills/research/zotero-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zrwangems/dsh-zrwang-plugin/blob/main/skills/research/zotero-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read and write a Zotero library from the shell with the `zotero-cli` command - search papers by keyword or meaning, read PDF full text and page ranges, get and set metadata, manage collections, tags, notes and annotations, add items by DOI/URL/ISBN, and export bibliographies. Use whenever the user asks about their Zotero library, references, citations, papers they have saved, or their reading notes."
+}
