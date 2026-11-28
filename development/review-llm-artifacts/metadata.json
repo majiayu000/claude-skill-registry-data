@@ -1,0 +1,38 @@
+{
+  "name": "review-llm-artifacts",
+  "repo": "existential-birds/beagle",
+  "path": "skills/review-llm-artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "review-llm-artifacts",
+  "downloaded_at": "2026-11-28T06:56:39.575154Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/review-llm-artifacts/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/review-llm-artifacts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects common LLM coding agent artifacts across four categories (tests, dead code, abstraction, style) over the project or changed files \u2014 using parallel subagents when the agent supports them, otherwise four sequential passes. Scans files changed since main by default; use --all for full-project scan. Triggers on LLM cruft cleanup, agent-generated code review, dead code sweeps, test-quality passes, or when the user asks to scan the whole repo."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "playwright-expert",
+  "repo": "Jeffallan/claude-skills",
+  "path": "plugin/skills/playwright-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Jeffallan/claude-skills",
+  "dir_name": "playwright-expert",
+  "downloaded_at": "2026-11-28T06:43:24.690255Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, infra, infrastructure",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeffallan",
+  "source_url": "https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/playwright-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/playwright-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing E2E tests with Playwright, setting up test infrastructure, or debugging flaky browser tests. Invoke to write test scripts, create page objects, configure test fixtures, set up reporters, add CI integration, implement API mocking, or perform visual regression testing. Trigger terms: Playwright, E2E test, end-to-end, browser testing, automation, UI testing, visual testing, Page Object Model, test flakiness."
+}

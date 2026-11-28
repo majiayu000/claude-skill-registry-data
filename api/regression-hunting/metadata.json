@@ -1,0 +1,37 @@
+{
+  "name": "regression-hunting",
+  "repo": "elementalsouls/Claude-BugHunter",
+  "path": "skills/regression-hunting/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/elementalsouls/Claude-BugHunter",
+  "dir_name": "regression-hunting",
+  "downloaded_at": "2026-11-28T06:55:46.202237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elementalsouls",
+  "source_url": "https://github.com/elementalsouls/Claude-BugHunter/blob/main/skills/regression-hunting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elementalsouls/Claude-BugHunter/blob/main/skills/regression-hunting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when re-testing a target you've hunted before, on a retainer/continuous-scope program, or any time the question is \"what changed since last time?\" rather than \"what's here?\". Diff-based hunting against the deterministic `cbh diff` engine \u2014 surfaces new assets, new ranked endpoints, tech-stack drift, status-code flips, and newly flagged secrets since the last recon snapshot, so re-runs find fresh surface instead of re-reading surface already cleared."
+}

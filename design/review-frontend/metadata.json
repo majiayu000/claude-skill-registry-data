@@ -1,0 +1,40 @@
+{
+  "name": "review-frontend",
+  "repo": "existential-birds/beagle",
+  "path": "skills/review-frontend/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "review-frontend",
+  "downloaded_at": "2026-11-28T06:56:36.386126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ui, css, frontend, component, tailwind",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "css",
+      "frontend",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/review-frontend/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/review-frontend/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive React/TypeScript frontend code review with per-area review skills, run in parallel where the agent supports subagents and sequentially otherwise. Detects React Router, Remix v2, shadcn/ui, React Flow, Zustand, Tailwind v4, and Vitest before loading matching skills."
+}

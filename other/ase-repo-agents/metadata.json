@@ -1,0 +1,37 @@
+{
+  "name": "ase-repo-agents",
+  "repo": "rse/ase",
+  "path": "plugin/skills/ase-repo-agents/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/rse/ase",
+  "dir_name": "ase-repo-agents",
+  "downloaded_at": "2026-11-28T07:05:56.560416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rse",
+  "source_url": "https://github.com/rse/ase/blob/master/plugin/skills/ase-repo-agents/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rse/ase/blob/master/plugin/skills/ase-repo-agents/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a missing or update an existing AGENTS.md agent guidance file, by managing its sections About, Repository Layout, Build System, and Code Style along the read-only verified facts of the repository, while keeping all hand-written sections verbatim. Use when the user wants to \"create\", \"generate\", \"update\", \"refresh\", or \"sync\" the \"AGENTS.md\", the \"agent guidance\", or the \"agent instructions\" of a repository."
+}

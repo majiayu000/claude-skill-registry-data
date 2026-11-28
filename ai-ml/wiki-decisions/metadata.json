@@ -1,0 +1,37 @@
+{
+  "name": "wiki-decisions",
+  "repo": "Ar9av/obsidian-wiki",
+  "path": "skills/wiki-decisions/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/Ar9av/obsidian-wiki",
+  "dir_name": "wiki-decisions",
+  "downloaded_at": "2026-11-28T06:40:38.585045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ar9av",
+  "source_url": "https://github.com/Ar9av/obsidian-wiki/blob/main/skills/wiki-decisions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ar9av/obsidian-wiki/blob/main/skills/wiki-decisions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Optional decision layer: hand small closed judgments (is this page relevant, does this source update or duplicate that page, do these two sections conflict) to a System One decision model (TypeSafe Jev) instead of reading pages to decide. Off by default. Use when the user says \"/wiki-decisions\", \"enable the decision layer\", \"use Jev\", \"gate my search results\", \"triage this ingest\", \"screen for contradictions\", or asks how the decision layer works or what it sends. Not a writer: it never answers questions, writes, merges or deletes pages. For the answering itself use wiki-query, wiki-ingest, wiki-dedup or wiki-lint."
+}

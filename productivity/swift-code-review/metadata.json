@@ -1,0 +1,38 @@
+{
+  "name": "swift-code-review",
+  "repo": "existential-birds/beagle",
+  "path": "skills/swift-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "swift-code-review",
+  "downloaded_at": "2026-11-28T06:56:37.367042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/swift-code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/swift-code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews Swift code for concurrency safety, error handling, memory management, and common mistakes. Use when reviewing .swift files for async/await patterns, actor isolation, Sendable conformance, or general Swift best practices."
+}

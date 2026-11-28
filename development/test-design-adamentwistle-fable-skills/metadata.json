@@ -1,0 +1,39 @@
+{
+  "name": "test-design",
+  "repo": "adamentwistle/fable-skills",
+  "path": "test-design/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "test-design-adamentwistle-fable-skills",
+  "downloaded_at": "2026-11-28T06:48:29.145781Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/test-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/test-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "What to test and how \u2014 regression test fails first, boundary tables, behavior over implementation, boundary-only mocks, the mock-echo trap, proving new tests can fail. Use when writing or reviewing tests, adding regression coverage for a fix, asked \"is this tested?\", raising coverage, or judging whether a green suite protects anything. Not for deciding whether the code itself is correct \u2014 that is debugging."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "rust-code-review",
+  "repo": "existential-birds/beagle",
+  "path": "skills/rust-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "rust-code-review-existential-birds-beagle",
+  "downloaded_at": "2026-11-28T06:56:36.622675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/rust-code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/rust-code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews Rust code for ownership, borrowing, lifetime, error handling, trait design, unsafe usage, and common mistakes. Use when reviewing .rs files, checking borrow checker issues, error handling patterns, or trait implementations. Covers Rust 2024 edition patterns and modern idioms."
+}

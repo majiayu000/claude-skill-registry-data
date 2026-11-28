@@ -1,0 +1,38 @@
+{
+  "name": "agent-architecture-analysis",
+  "repo": "existential-birds/beagle",
+  "path": "skills/agent-architecture-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "agent-architecture-analysis",
+  "downloaded_at": "2026-11-28T06:56:41.062230Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/agent-architecture-analysis/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/agent-architecture-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when auditing an agent codebase against the 12-Factor Agents methodology, reviewing LLM-powered system architecture, or assessing agentic app compliance. Triggers on \"analyze agent architecture\", \"12-factor audit\", \"how compliant is this agent\", or \"evaluate this LLM app\". Also applies when comparing frameworks or planning agent improvements. Not for quick checklists \u2014 this performs deep per-factor codebase analysis with file-level evidence."
+}

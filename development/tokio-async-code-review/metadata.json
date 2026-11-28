@@ -1,0 +1,38 @@
+{
+  "name": "tokio-async-code-review",
+  "repo": "existential-birds/beagle",
+  "path": "skills/tokio-async-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "tokio-async-code-review",
+  "downloaded_at": "2026-11-28T06:56:40.442104Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/tokio-async-code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/tokio-async-code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews tokio async runtime usage for task management, sync primitives, channel patterns, and runtime configuration. Covers Rust 2024 edition changes including async fn in traits, RPIT lifetime capture, LazyLock, and if-let temporary scoping. Use when reviewing Rust code that uses tokio, async/await patterns, spawn, channels, or async synchronization. Also covers tokio-util, tower, and hyper integration patterns."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "llm-judge",
+  "repo": "existential-birds/beagle",
+  "path": "skills/llm-judge/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "llm-judge",
+  "downloaded_at": "2026-11-28T06:56:32.912941Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/llm-judge/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/llm-judge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when comparing two or more code implementations against a spec or requirements doc. Triggers on \"which repo is better\", \"compare these implementations\", \"evaluate both solutions\", \"rank these codebases\", or \"judge which approach wins\". Also covers choosing between competing PRs or vendor submissions solving the same problem. Does NOT review a single codebase for quality \u2014 use code review skills instead. Does NOT evaluate strategy docs \u2014 use strategy-review. Requires a spec file and 2+ repo paths."
+}

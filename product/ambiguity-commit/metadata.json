@@ -1,0 +1,37 @@
+{
+  "name": "ambiguity-commit",
+  "repo": "adamentwistle/fable-skills",
+  "path": "ambiguity-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "ambiguity-commit",
+  "downloaded_at": "2026-11-28T06:48:25.732499Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/ambiguity-commit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/ambiguity-commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resolve ambiguous requests by investigating, choosing the best-supported reading, and stating the interpretation, instead of guessing silently or blocking on questions. Use whenever a request has multiple plausible readings or an unstated parameter \u2014 which file, which env, which branch, how thorough, what format \u2014 or you catch yourself about to ask \"what do you mean by X?\". Not for destructive or outward-facing actions where a wrong reading cannot be undone; ask there."
+}

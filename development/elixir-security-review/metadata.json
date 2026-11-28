@@ -1,0 +1,39 @@
+{
+  "name": "elixir-security-review",
+  "repo": "existential-birds/beagle",
+  "path": "skills/elixir-security-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "elixir-security-review",
+  "downloaded_at": "2026-11-28T06:56:40.210950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/elixir-security-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/elixir-security-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews Elixir code for security vulnerabilities including code injection, atom exhaustion, secret exposure, and BEAM process exposure. Use when reviewing code handling user input, external data, or sensitive configuration."
+}

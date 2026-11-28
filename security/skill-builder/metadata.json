@@ -1,0 +1,37 @@
+{
+  "name": "skill-builder",
+  "repo": "existential-birds/beagle",
+  "path": "skills/skill-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "skill-builder",
+  "downloaded_at": "2026-11-28T06:56:35.130288Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/skill-builder/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/skill-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates and refines Agent Skills with agentskills.io specification compliance, progressive disclosure, validation, and testing. Use when designing, authoring, or auditing SKILL.md files, references, or skill scripts."
+}

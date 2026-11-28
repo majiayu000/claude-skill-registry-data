@@ -1,0 +1,38 @@
+{
+  "name": "incident-diagnosis",
+  "repo": "adamentwistle/fable-skills",
+  "path": "incident-diagnosis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "incident-diagnosis",
+  "downloaded_at": "2026-11-28T06:48:27.260082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, forensics=3",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/incident-diagnosis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/incident-diagnosis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Live-system triage \u2014 read-only evidence first, establish what/since-when/how-wide, correlate onset with changes, trace one failing request, mitigate reversibly before root-causing. Use when production or a shared environment is broken now \u2014 outages, error-rate or latency spikes, \"site is down\", pager alerts, users reporting errors \u2014 and before restarting, redeploying, flushing, or deleting anything as a first move. Not for reproducible bugs in a dev checkout (see root-cause-debugging)."
+}

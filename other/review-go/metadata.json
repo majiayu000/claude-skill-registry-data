@@ -1,0 +1,37 @@
+{
+  "name": "review-go",
+  "repo": "existential-birds/beagle",
+  "path": "skills/review-go/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "review-go",
+  "downloaded_at": "2026-11-28T06:56:33.075612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/review-go/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/review-go/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive Go backend code review with optional parallel review areas. Use when reviewing changed Go files; detects BubbleTea, Wish SSH, and Prometheus and loads the matching review skills."
+}

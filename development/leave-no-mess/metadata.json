@@ -1,0 +1,38 @@
+{
+  "name": "leave-no-mess",
+  "repo": "adamentwistle/fable-skills",
+  "path": "leave-no-mess/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "leave-no-mess",
+  "downloaded_at": "2026-11-28T06:48:25.063455Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/leave-no-mess/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/leave-no-mess/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clean up a session's side effects \u2014 background processes and ports, temp files, debug scaffolding, seeded test data, stashes, config and env changes \u2014 and name what has to stay. Use before the final report on any task that started servers or watchers, wrote scratch or repro files, added logging or debug output, seeded databases, registered webhooks or test accounts, or changed configs, env vars, or branches. Not for reviewing the intended diff itself."
+}

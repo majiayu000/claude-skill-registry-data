@@ -1,0 +1,38 @@
+{
+  "name": "fix-llm-artifacts",
+  "repo": "existential-birds/beagle",
+  "path": "skills/fix-llm-artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "fix-llm-artifacts",
+  "downloaded_at": "2026-11-28T06:56:37.666348Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/fix-llm-artifacts/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/fix-llm-artifacts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Applies fixes from a prior review-llm-artifacts run with safe/risky classification, honoring verify-llm-artifacts output when present to skip false positives. Use when cleaning up reviewed LLM coding artifacts."
+}

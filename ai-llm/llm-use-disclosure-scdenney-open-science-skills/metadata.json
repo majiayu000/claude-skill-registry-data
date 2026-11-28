@@ -1,0 +1,40 @@
+{
+  "name": "llm-use-disclosure",
+  "repo": "scdenney/open-science-skills",
+  "path": "plugin/skills/llm-use-disclosure/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/scdenney/open-science-skills",
+  "dir_name": "llm-use-disclosure-scdenney-open-science-skills",
+  "downloaded_at": "2026-11-28T07:06:00.551895Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, language-model, prompt",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "language-model",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scdenney",
+  "source_url": "https://github.com/scdenney/open-science-skills/blob/main/plugin/skills/llm-use-disclosure/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scdenney/open-science-skills/blob/main/plugin/skills/llm-use-disclosure/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drafts or audits the AI-use statement and the LLM reproducibility appendix of a manuscript or proposal. Inventories every use of a language model in the project, separates writing assistance from use as a research method, fetches the target journal's or funder's current policy, places each disclosure where that policy wants it, and writes the appendix a replicator needs, with models, versions, dates, parameters, prompts, and validation. Use before submission, when a journal questionnaire asks about AI use, when a manuscript uses a model for coding, classification, OCR, or synthetic data, or when a co-author asks what must be declared. Codebook and validation design go to text-classification, and the full methods checklist to methods-reporting.",
+  "content_fingerprint": "03ae86899c15c8249cbe92171837f83fb48094714d8c94e939e28de8bc580c7e"
+}

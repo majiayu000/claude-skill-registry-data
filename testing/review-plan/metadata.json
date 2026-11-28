@@ -1,0 +1,39 @@
+{
+  "name": "review-plan",
+  "repo": "existential-birds/beagle",
+  "path": "skills/review-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "review-plan",
+  "downloaded_at": "2026-11-28T06:56:34.085266Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, tdd, jest, pytest",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "jest",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/review-plan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/review-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews implementation plans for parallelization, TDD adherence, type/API accuracy, library best practices, and security before execution. Use when reviewing a technical plan file or validating an implementation plan prior to coding."
+}

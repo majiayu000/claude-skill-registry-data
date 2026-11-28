@@ -1,0 +1,37 @@
+{
+  "name": "subagent-fanout",
+  "repo": "adamentwistle/fable-skills",
+  "path": "subagent-fanout/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "subagent-fanout",
+  "downloaded_at": "2026-11-28T06:48:25.392573Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/subagent-fanout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/subagent-fanout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate breadth \u2014 multi-file searches, independent investigations, noisy command output \u2014 to subagents with precise briefs, then verify their claims before acting on them. Use when locating an answer means reading more than ~4 files, when several unrelated investigations could run in parallel, or when raw output would flood the context needed for synthesis and edits. Not for a single known file or symbol lookup."
+}

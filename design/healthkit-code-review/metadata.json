@@ -1,0 +1,37 @@
+{
+  "name": "healthkit-code-review",
+  "repo": "existential-birds/beagle",
+  "path": "skills/healthkit-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "healthkit-code-review",
+  "downloaded_at": "2026-11-28T06:56:39.967819Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/healthkit-code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/healthkit-code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews HealthKit code for authorization patterns, query usage, query descriptors, background delivery, and data type handling. Use when reviewing code with import HealthKit, HKHealthStore, HKSampleQuery, HKSampleQueryDescriptor, HKObserverQuery, or HKQuantityType."
+}

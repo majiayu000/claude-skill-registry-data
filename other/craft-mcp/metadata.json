@@ -1,0 +1,37 @@
+{
+  "name": "craft-mcp",
+  "repo": "michtio/craftcms-claude-skills",
+  "path": "skills/craft-mcp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/michtio/craftcms-claude-skills",
+  "dir_name": "craft-mcp",
+  "downloaded_at": "2026-11-28T07:02:46.060852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "michtio",
+  "source_url": "https://github.com/michtio/craftcms-claude-skills/blob/main/skills/craft-mcp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/michtio/craftcms-claude-skills/blob/main/skills/craft-mcp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Craft CMS 5.12+ MCP servers, OAuth server and personal access tokens: authenticated, public and stdio (mcp/serve) servers, mcp:read/write/admin levels, Settings \u2192 MCP, config/mcp.php and config/oauth.php, oauth/generate-keys and CRAFT_OAUTH_PRIVATE_KEY/PUBLIC_KEY on DDEV, production, Cloud, Servd and fortrabbit, connecting Claude Code or another client, the snake_case tool catalogue, and plugin MCP tools, field interfaces and OAuth resources."
+}

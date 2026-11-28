@@ -1,0 +1,37 @@
+{
+  "name": "web-research",
+  "repo": "existential-birds/beagle",
+  "path": "skills/web-research/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "web-research",
+  "downloaded_at": "2026-11-28T06:56:34.357025Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/web-research/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/web-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants web research: gathering cited, multi-angle evidence on a specific question. Triggers on: \"research X for me\", \"do web research on\", \"look up sources for\", \"find citations for\", \"gather evidence on\", \"what does the web say about X\". Also invoked programmatically by other beagle skills (prfaq-beagle Ignition, brainstorm-beagle reference points, strategy-interview context grounding) via the companion contract. Does NOT trigger on codebase lookups (\"find this function\", \"search the repo\"), local file search, LLM-as-judge evaluation, or paywalled/auth-gated scraping. Produces a written plan, parallel-subagent findings, and a cited synthesis report on disk \u2014 never inline prose, never unsourced claims."
+}

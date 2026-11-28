@@ -1,0 +1,37 @@
+{
+  "name": "codebase-orientation",
+  "repo": "adamentwistle/fable-skills",
+  "path": "codebase-orientation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "codebase-orientation",
+  "downloaded_at": "2026-11-28T06:48:27.808168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/codebase-orientation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/codebase-orientation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fast recon before changing unfamiliar code \u2014 instructions, manifest, tree, one flow traced end-to-end, git history, newest precedent. Use when starting in a repo or module you haven't touched this session, when asked \"where does X live\" or \"how is Y wired\", or before designing against an existing architecture. Not for a one-line edit to a file already open in the conversation."
+}

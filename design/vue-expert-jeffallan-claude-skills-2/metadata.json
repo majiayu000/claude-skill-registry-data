@@ -1,0 +1,38 @@
+{
+  "name": "vue-expert",
+  "repo": "Jeffallan/claude-skills",
+  "path": "plugin/skills/vue-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Jeffallan/claude-skills",
+  "dir_name": "vue-expert-jeffallan-claude-skills-2",
+  "downloaded_at": "2026-11-28T06:43:18.599935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, frontend, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeffallan",
+  "source_url": "https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/vue-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/vue-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds Vue 3 components with Composition API patterns, renders Vue on the server without Nuxt, sets up Pinia stores, scaffolds Quasar/Capacitor mobile apps, implements PWA features, and optimises Vite builds. Use when creating Vue 3 applications with Composition API, writing reusable composables, managing state with Pinia, building hybrid mobile apps with Quasar or Capacitor, configuring service workers, or tuning Vite configuration and TypeScript integration. For Nuxt projects, use nuxt-expert."
+}

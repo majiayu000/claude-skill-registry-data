@@ -1,0 +1,38 @@
+{
+  "name": "cross-platform-care",
+  "repo": "adamentwistle/fable-skills",
+  "path": "cross-platform-care/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "cross-platform-care",
+  "downloaded_at": "2026-11-28T06:48:27.576759Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/cross-platform-care/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/cross-platform-care/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write scripts, paths, and file I/O that survive a machine they weren't developed on \u2014 path separators, shell dialects, quoting, line endings, case-sensitivity, missing or divergent tools, timezones. Use when writing shell or PowerShell scripts, CI steps, Makefiles or justfiles, path manipulation, file reads and writes, or install/setup instructions others will run. Not for pure in-memory logic."
+}

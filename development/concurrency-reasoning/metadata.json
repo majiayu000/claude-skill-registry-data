@@ -1,0 +1,38 @@
+{
+  "name": "concurrency-reasoning",
+  "repo": "adamentwistle/fable-skills",
+  "path": "concurrency-reasoning/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "concurrency-reasoning",
+  "downloaded_at": "2026-11-28T06:48:27.994482Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/concurrency-reasoning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/concurrency-reasoning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Async/concurrent/streaming discipline \u2014 five questions (overlapping runs, check-then-act, mutation across await, response ordering, cancellation), guard scope, fan-out failure, idempotent retries, shared-state audit, race amplification. Use for async fan-out (Promise.all, gather), streams/SSE/websockets, queue workers, cron jobs, webhooks, caches, locks, retries, and bugs described as \"sometimes\", \"duplicate\", \"double-charged\", or \"only under load\"."
+}

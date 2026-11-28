@@ -1,0 +1,38 @@
+{
+  "name": "review-elixir",
+  "repo": "existential-birds/beagle",
+  "path": "skills/review-elixir/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "review-elixir",
+  "downloaded_at": "2026-11-28T06:56:35.419191Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, compile",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/review-elixir/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/review-elixir/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews Elixir and Phoenix codebases with Mix linter gates, technology detection, and parallel or sequential sub-reviews. Use when reviewing .ex, .exs, or .heex changes."
+}

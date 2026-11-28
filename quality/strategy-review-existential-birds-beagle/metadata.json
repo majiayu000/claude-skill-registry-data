@@ -1,0 +1,38 @@
+{
+  "name": "strategy-review",
+  "repo": "existential-birds/beagle",
+  "path": "skills/strategy-review/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "strategy-review-existential-birds-beagle",
+  "downloaded_at": "2026-11-28T06:56:36.104074Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/strategy-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/strategy-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when reviewing, critiquing, or stress-testing an existing strategy document. Evaluates seven dimensions \u2014 diagnosis quality, guiding policy strength, action coherence, assumption exposure, falsifiability \u2014 with optional 7S, Five Forces, Balanced Scorecard, and Hoshin Kanri lenses. Triggers on: review my strategy, poke holes in this plan, what's weak here, strategy audit, red team this. Does NOT build strategy (use strategy-interview) or brainstorm project ideas (use brainstorm-beagle)."
+}

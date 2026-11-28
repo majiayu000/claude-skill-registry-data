@@ -1,0 +1,37 @@
+{
+  "name": "prfaq-beagle",
+  "repo": "existential-birds/beagle",
+  "path": "skills/prfaq-beagle/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "prfaq-beagle",
+  "downloaded_at": "2026-11-28T06:56:34.499085Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/prfaq-beagle/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/prfaq-beagle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to pressure-test a product, internal-tool, or OSS concept against Amazon's Working Backwards PRFAQ gauntlet before committing to a spec. Triggers on: \"work backwards\", \"write a PRFAQ\", \"press release first\", \"is this idea worth building\", \"pressure-test this concept\", \"filter this before brainstorm\", \"is this a real product\". Also catches solution-first pitches (\"I want to build X that does Y\") and technology-first pitches (\"use AI to...\") that need customer-first filtering. Produces a binary pass/fail verdict, not a polished doc. Hardcore coaching \u2014 direct, skeptical, concrete. On pass, hands off to brainstorm-beagle with a concept brief. Does NOT write code, plan implementation, scaffold projects, or draft specs."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "rust-best-practices",
+  "repo": "existential-birds/beagle",
+  "path": "skills/rust-best-practices/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/existential-birds/beagle",
+  "dir_name": "rust-best-practices",
+  "downloaded_at": "2026-11-28T06:56:39.017878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "existential-birds",
+  "source_url": "https://github.com/existential-birds/beagle/blob/main/skills/rust-best-practices/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/skills/rust-best-practices/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Development guidance for writing idiomatic, performant, and safe Rust. Use when writing new Rust modules, designing library APIs, configuring Cargo workspace lints and features, optimizing monomorphization or cache alignment, or migrating to Rust Edition 2024."
+}

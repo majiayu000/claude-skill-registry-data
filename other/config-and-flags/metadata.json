@@ -1,0 +1,38 @@
+{
+  "name": "config-and-flags",
+  "repo": "adamentwistle/fable-skills",
+  "path": "config-and-flags/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "config-and-flags",
+  "downloaded_at": "2026-11-28T06:48:26.001079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/config-and-flags/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/config-and-flags/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Treat configuration and feature flags as typed, validated inputs with a lifecycle \u2014 read once at startup, parse to types, fail fast on missing or malformed values, no scattered env reads or environment-name branching, flags default safe and get removed. Use when adding or reading an env var, config key, settings file, or feature flag; when behaviour differs per environment; when a value \"will be set in prod\"; and when reviewing code that calls process.env, os.environ, getenv, or a flag client."
+}

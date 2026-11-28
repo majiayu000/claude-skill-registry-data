@@ -1,0 +1,37 @@
+{
+  "name": "root-cause-debugging",
+  "repo": "adamentwistle/fable-skills",
+  "path": "root-cause-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "root-cause-debugging-adamentwistle-fable-skills",
+  "downloaded_at": "2026-11-28T06:48:27.901346Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/root-cause-debugging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/root-cause-debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematic debugging \u2014 reproduce, bisect, prove the cause with a falsifiable hypothesis, fix minimally, re-verify against the original repro. Use for any bug, test failure, regression, crash, wrong output, or flaky behavior, before proposing a fix \u2014 including \"it used to work\", \"sometimes fails\", and whenever a first fix didn't work. Not for pure environment failures (command-not-found, import errors) \u2014 see environment-first."
+}

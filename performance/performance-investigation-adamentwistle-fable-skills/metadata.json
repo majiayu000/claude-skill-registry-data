@@ -1,0 +1,39 @@
+{
+  "name": "performance-investigation",
+  "repo": "adamentwistle/fable-skills",
+  "path": "performance-investigation/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "performance-investigation-adamentwistle-fable-skills",
+  "downloaded_at": "2026-11-28T06:48:28.724850Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency, speed, benchmark",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "performance",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/performance-investigation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/performance-investigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measurement-first performance work \u2014 baseline, profile, fix by leverage (do less work \u2192 cache \u2192 parallelize \u2192 tune constants), verify with the same measurement. Use for any \"make it faster\", \"why is this slow\", latency/memory/CPU investigation, timeout or p95 regression, or before adding caching, memoization, indexes or parallelism on intuition. Not for reviewing new code for complexity-class mistakes (see perf-sanity)."
+}

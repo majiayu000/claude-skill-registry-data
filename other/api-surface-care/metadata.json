@@ -1,0 +1,37 @@
+{
+  "name": "api-surface-care",
+  "repo": "adamentwistle/fable-skills",
+  "path": "api-surface-care/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/adamentwistle/fable-skills",
+  "dir_name": "api-surface-care",
+  "downloaded_at": "2026-11-28T06:48:26.216721Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adamentwistle",
+  "source_url": "https://github.com/adamentwistle/fable-skills/blob/main/api-surface-care/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adamentwistle/fable-skills/blob/main/api-surface-care/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Treat any change to a shared interface as a contract change with consumers you cannot see. Use before renaming, removing, retyping, reordering, or changing the default of anything other code depends on \u2014 exported functions and types, HTTP routes and JSON fields, CLI flags and output formats, config keys, env vars, event or message schemas, DB columns, error codes, exit codes, and anything persisted or cached. Not for private helpers with only in-repo callers."
+}

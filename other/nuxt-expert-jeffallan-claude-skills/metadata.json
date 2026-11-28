@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-expert",
+  "repo": "Jeffallan/claude-skills",
+  "path": "plugin/skills/nuxt-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jeffallan/claude-skills",
+  "dir_name": "nuxt-expert-jeffallan-claude-skills",
+  "downloaded_at": "2026-11-28T06:43:19.460607Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeffallan",
+  "source_url": "https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/nuxt-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/nuxt-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, upgrades and reviews Nuxt 4 full-stack applications: the app/ directory layout, SSR-safe data fetching with useFetch, useAsyncData and $fetch, Nitro server routes with nuxt/server handlers, runtime config and server-only secrets, hybrid rendering with route rules (SSR, SSG, SWR, ISR), server components and islands, lazy hydration, nuxt-security and nuxt-auth-utils, deployment presets for Node, Vercel, Netlify and Cloudflare, and tests with @nuxt/test-utils and Vitest. Use when working in a project with nuxt.config.ts or a nuxt dependency, when adding pages, server API routes, auth, caching or deployment to a Nuxt app, when migrating Nuxt 3 to 4 or preparing for Nuxt 5, or when diagnosing hydration mismatches, double fetching or NUXT_E error codes. Not for plain Vue SPAs without Nuxt or for Next.js projects."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ticket-guard",
+  "repo": "Jeffallan/claude-skills",
+  "path": "plugin/skills/ticket-guard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jeffallan/claude-skills",
+  "dir_name": "ticket-guard",
+  "downloaded_at": "2026-11-28T06:43:20.876180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeffallan",
+  "source_url": "https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/ticket-guard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeffallan/claude-skills/blob/main/plugin/skills/ticket-guard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guards one workflow ticket with marker-scoped hooks that freeze its RED tests, re-run GREEN before a goal-mode stop, and restore the ticket's context after compaction. Use when ticket:execute starts or resumes a ticket, or when a session must pick a ticket back up after compaction."
+}
